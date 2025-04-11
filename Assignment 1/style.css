@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Montserrat:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+body {
+    font-family: "Combo", system-ui;
+    line-height: 1.6;
+    background-color: #dceee2;
+    flex: 1
+}
+
+header {
+    background: #dceee2;
+    text-align: center;
+    padding: 2em;
+}
+h2{
+    font-size: 2em;
+}
+
+.wrapper.type{
+    background-color: #dceee2;
+    font-size: 2em;
+}
+
+.type.typing{
+    padding: 2em 1em;
+    width: auto;
+    margin: auto;
+}
+
+/*typing animation */
+
+.type h1{
+    width: 20ch;
+    border-right: 4px solid black;
+    margin: 1rem auto;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(20, end), blink-caret .7s step-end infinite alternate;
+}
+
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@-webkit-keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+nav {
+    background: #ffe8e4;
+    padding: 1rem;
+    font-size: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.activity-section {
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+
+.home-image{
+    padding-top: 25px;
+    width: 400px;
+    height: auto;
+}
+
+.coffeeshop-image{
+    width: 600px;
+    height: auto;
+}
+
+.gym-image{
+    padding-top: 25px;
+    width: 450px;
+    height: auto;
+}
+
+.sunset-image{
+    padding-top: 25px;
+    width: 450px;
+    height: auto;
+}
+
+.description {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+
+}
+
+.btn-details{
+display: inline-block;
+padding: 12px 25px;
+background-color: #e3978a;
+color: white;
+text-decoration: none;
+border-radius: 25px;
+transition: all 0.3s ease;
+}
+
+.btn-details:hover {
+    background-color: #e3978a;
+    transform: scale(1.05);
+}
+
+/* morning routine pg */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 0;
+    box-shadow: 8px 8 px 10px rgba(0,0,0,0.2);
+}
+
+.flower-icon span{
+    font-size: 3em;
+}
+
+.todo-list{
+    display:flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.todo-list li{
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.todo-list li:hover{
+    transform: scale(1.05);
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #e08e87;
+    cursor: pointer;
+  }
+
+  .nav-button {
+    padding: 12px 24px;
+    background-color: #e08e87;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;;
+    margin-top: 2rem;
+    float: right;
+    margin-right: 5rem;
+  }
+  
+  .nav-button:hover {
+    background-color: #e3978a;
+    transform: scale(1.05);
+  }
+
+  /* coffee shop pg */
+  #signature-drink {
+    padding: 40px;
+    text-align: center;
+}
+
+#signature-drink h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#signature-drink p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.drink-photo img{
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#gallery {
+    padding: 10px;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-images img {
+    width: 30%;
+    border-radius: 10px;
+}
+
+/* gym page */
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.calendar-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 700px;
+}
+
+.calendar-table th,
+.calendar-table td {
+    padding: 15px;
+    text-align: center;
+    width: 14.28%;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.calendar-table th {
+    background-color: #e08e87;
+    color: white;
+}
+
+.calendar-table td {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.calendar-table td.empty {
+    background-color: #f4f4f4;
+}
+
+.calendar-table td.workout {
+    background-color: #eaf0f3;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.calendar-table td.workout:hover {
+    background-color: #e08e87;
+    color: white;
+}
+
+.workout {
+    background-color: #eee;
+    padding: 1rem;
+    font-weight: bold;
+  }
+  
+  /* Make <label> act like a clickable cell */
+  .calendar-table label {
+    display: block;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: #fff;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+  
+  /* hide cards by default */
+  .card {
+    display: none;
+    background: #fff;
+    padding: 1rem;
+    border: 2px solid #d99792;
+    border-radius: 10px;
+    margin: 1em auto;
+    max-width: 400px;
+  }
+
+  .card li{
+    padding: 4px 0;
+    list-style-type: none;
+  }
+
+  .card h3{
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  /* show card when input is checked */
+    #workout-leg-day:checked ~ .card#card-leg-day,
+    #workout-push-day:checked ~ .card#card-push-day,
+    #workout-pull-day:checked ~ .card#card-pull-day,
+    #workout-pilates:checked ~ .card#card-pilates,
+    #workout-leg-day-1:checked ~ .card#card-leg-day-1 {
+    display: flex; 
+  }
+
+  /* sunset pg */
+.sunset{
+    background: linear-gradient(to bottom, #ffcc99, #ff6699);
+    animation: fadeToNight 15s ease-in-out forwards;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+@keyframes fadeToNight{
+    0% {
+        background: linear-gradient(to bottom, #ffcc99, #ff6699);
+    }
+    50% {
+        background: linear-gradient(to bottom, #ff9966, #660099);
+    }
+    100% {
+        background: linear-gradient(to bottom, #0b1a2f, #000000);
+    }   
+}
+
+@keyframes twinkle {
+    0% { opacity: 0; }
+    100% { opacity: 0.8; }
+}
+
+.moon {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 70px;
+    height: 70px;
+    background: radial-gradient(circle at 30% 10%, #fff, #ccc);
+    border-radius: 50%;
+    box-shadow: 0 0 25px #fff;
+    opacity: 0;
+    animation: riseMoon 6s 8s forwards ease-in-out;
+    z-index: 1;
+}
+
+@keyframes riseMoon {
+    0% { top: 100%; opacity: 0; }
+    100% { top: 18%; opacity: 1; }
+}
+
+.shooting-star {
+    position: absolute;
+    top: 10%;
+    left: -100px;
+    width: 3px;
+    height: 3px;
+    background: white;
+    box-shadow: 0 0 6px 3px white;
+    border-radius: 50%;
+    animation: shoot 3s 5s forwards ease-in-out infinite;
+    opacity: 0;
+    z-index: 3;
+}
+  
+@keyframes shoot {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      transform: translate(500px, 300px);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(600px, 400px);
+      opacity: 0;
+    }
+}
+.content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding-top: 150vh;
+
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 2rem;
+    background: #ffffff20;
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background: #ffffff40;
+}
