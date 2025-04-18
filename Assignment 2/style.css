@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Delicious+Handrawn&family=Mansalva&family=Montserrat:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+}
+  
+body {
+    font-family: "Delicious Handrawn", cursive;
+    background-image: url("images/lanterns.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    min-height: 100vh;
+    display: flex;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("images/lanterns.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    z-index: -2;
+    top:0; left:0; right:0; bottom:0;
+}
+  
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .8); 
+    z-index: -1;
+}
+
+h1{
+    text-align: center;
+    color: #790E18;
+    margin-bottom: 40px;
+    word-spacing: 10px;
+    font-size: 10em;
+    list-style-type: none;
+}
+
+a h1 {
+    text-decoration: none;
+    color: #790E18;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a h1:hover {
+    color: #9B4B52;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+
+#introScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    flex-direction: column;
+}
+
+.btn-details{
+    display: inline-block;
+    margin-top: 2em ;
+    padding: 12px 25px;
+    background-color: #9B4B52;
+    color: #790E18;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: color 0.4s linear;
+    cursor: pointer;
+    font-size: 5em;
+}
+
+.btn-details:hover {
+    background-color: #790E18;
+    transform: scale(1.05);
+    color:#9B4B52;
+}
+  
+
+/* foods page */
+
+.content{
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.content h1{
+    list-style-type: none;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    width: 80em;
+    height: 100em;
+    perspective: 1000px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 10em;
+}
+
+.card h2{
+    font-size: 2rem;
+    margin: 15px 0;
+    color: #333;
+}
+
+.card p {
+    padding: 0 20px;
+    color: #666;
+    font-size: 1rem;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-inner,
+.card:focus .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.card-front {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.card-front img {
+    width: 100%;
+    height: 1000px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-front strong {
+    font-size: 10em;
+    color: #790E18;
+}
+
+.card-back {
+    background: #9B4B52;
+    transform: rotateY(180deg);
+    justify-content: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 8em;
+  }
+
+.card:hover .card-front {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+
+.note-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-left: 6px solid #9B4B52;
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin: 20px auto;
+    font-size: 3em;
+    max-width: 700px;
+    text-align: center;
+    font-family: "Delicious Handrawn", cursive;
+    color: #333;
+}
+
+  
