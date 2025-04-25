@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #fff;
+
+}
+
+h1{
+    text-align: center;
+    color: #790E18;
+    margin-bottom: 40px;
+    word-spacing: 10px;
+    font-size: 2em;
+    padding-right: 15px;
+}
+
+.nav-button{
+    padding: 12px 20px;
+    background-color: #790E18;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    float: right;
+    margin-right: 5rem;
+}
