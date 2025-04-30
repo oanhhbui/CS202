@@ -70,7 +70,7 @@ function onLocationUpdate(position) {
   });
 }
 
-// show modal
+// show meditation modal
 function showMeditationModal(location) {
     document.getElementById("meditationModalLabel").innerText = location.name;
     document.getElementById("meditationText").innerText =
