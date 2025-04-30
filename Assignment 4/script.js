@@ -108,3 +108,63 @@ navigator.geolocation.watchPosition(
 function setColor(color) {
     document.getElementById("currentColorNote").innerHTML = `Selected color: <strong>${color}</strong>`;
   }
+
+// log
+function saveNote() {
+    const type = document.getElementById("meditationType").value;
+    const note = document.getElementById("meditationNote").value.trim();
+  
+    if (!note) return;
+  
+    const entry = {
+      id: Date.now(),
+      type,
+      note,
+      timestamp: new Date().toLocaleString()
+    };
+  
+    const existing = JSON.parse(localStorage.getItem("meditationNotes") || "[]");
+    existing.push(entry);
+    localStorage.setItem("meditationNotes", JSON.stringify(existing));
+  
+    document.getElementById("meditationNote").value = "";
+    renderNotes();
+  }
+  
+  function renderNotes() {
+    const notesList = document.getElementById("notesList");
+    const existing = JSON.parse(localStorage.getItem("meditationNotes") || "[]");
+  
+    notesList.innerHTML = "";
+  
+    if (existing.length === 0) {
+      notesList.innerHTML = '<p class="text-muted">No entries yet.</p>';
+      return;
+    }
+  
+    existing.forEach((entry, index) => {
+      const card = document.createElement("div");
+      card.className = "card mb-3 shadow-sm";
+      card.innerHTML = `
+        <div class="card-body">
+          <h5 class="card-title text-success">${entry.type}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">${entry.timestamp}</h6>
+          <p class="card-text">${entry.note}</p>
+          <button class="btn btn-outline-danger btn-sm" onclick="deleteNote(${index})">Delete</button>
+        </div>
+      `;
+      notesList.appendChild(card);
+    });
+  }
+  
+  function deleteNote(index) {
+    const existing = JSON.parse(localStorage.getItem("meditationNotes") || "[]");
+    existing.splice(index, 1);
+    localStorage.setItem("meditationNotes", JSON.stringify(existing));
+    renderNotes();
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    if (document.getElementById("notesList")) {
+      renderNotes();
+    }
+  });
