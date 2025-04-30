@@ -15,9 +15,17 @@ const meditationLocations = [
     lat: 48.732527,
     lon: -122.484529,
     audio: "audio/Positive-Affirmations-for-Self-Love.mp3"
+  },
+  {
+    name: "Mindfulness Meditation",
+    lat: 48.732343,
+    lon: -122.484878,
+    audio: "audio/Positive-Affirmations-for-Self-Love.mp3"
   }
 ];
 
+
+
 // distance from meditation spots
 function getDistance(lat1, lon1, lat2, lon2) {
   const R = 6371e3;
