@@ -38,31 +38,40 @@
 <body>
 
   <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
-    <div class="container">
+  <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #d4edda;">
+    <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Mindful Moments</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+              aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="log.html">Log</a></li>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="log.html">Log</a>
+          </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Meditations</a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Meditations
+            </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="mindfulness.html">Mindfulness</a></li>
-              <li><a class="dropdown-item active" href="focused.html">Focused</a></li>
+              <li><a class="dropdown-item" href="focused.html">Focused</a></li>
               <li><a class="dropdown-item" href="moving.html">Moving</a></li>
             </ul>
           </li>
         </ul>
       </div>
     </div>
-  </nav>
+</nav> 
 
   <main class="container mt-5 pt-5">
-    <h2 class="text-success text-center mb-4">Focused Meditation</h2>
+    <h2 class="text-success mb-4">Focused Meditation</h2>
 
     <!-- meditation card -->
     <div class="card shadow-sm mb-4">

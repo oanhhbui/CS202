@@ -103,3 +103,8 @@ navigator.geolocation.watchPosition(
   err => alert("Location access is needed to show meditation spots."),
   { enableHighAccuracy: true, maximumAge: 1000 }
 );
+
+// moving exercise card
+function setColor(color) {
+    document.getElementById("currentColorNote").innerHTML = `Selected color: <strong>${color}</strong>`;
+  }
