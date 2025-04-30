@@ -1,8 +1,7 @@
-// global variables
 let map, mapInitialized = false;
-const shownMeditations = new Set();
+const shownLocations = new Set();
 
-// meditation locations
+// Meditation points
 const meditationLocations = [
   {
     name: "Moving Meditation",
@@ -16,15 +15,9 @@ const meditationLocations = [
     lon: -122.484529,
     audio: "audio/Positive-Affirmations-for-Self-Love.mp3"
   },
-  {
-    name: "Mindfulness Meditation",
-    lat: 48.732343,
-    lon: -122.484878,
-    audio: "audio/Positive-Affirmations-for-Self-Love.mp3"
-  }
 ];
 
-// distance from meditation spots
+// get distance from user's location to meditation location in meters
 function getDistance(lat1, lon1, lat2, lon2) {
   const R = 6371e3;
   const toRad = deg => deg * Math.PI / 180;
@@ -39,18 +32,16 @@ function getDistance(lat1, lon1, lat2, lon2) {
   return R * c;
 }
 
-// position updates
+// location update
 function onLocationUpdate(position) {
   const { latitude, longitude } = position.coords;
+  console.log(`User at: ${latitude}, ${longitude}`);
 
-  // initialize map once
   if (!mapInitialized) {
     map = L.map('map').setView([latitude, longitude], 17);
-
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
-      minZoom: 1,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      attribution: '&copy; OpenStreetMap'
     }).addTo(map);
 
     L.marker([latitude, longitude])
@@ -67,114 +58,48 @@ function onLocationUpdate(position) {
     mapInitialized = true;
   }
 
-  // meditation popup when near marked location
   meditationLocations.forEach(location => {
-    const distance = getDistance(latitude, longitude, location.lat, location.lon);
-    if (distance < 20 && !shownMeditations.has(location.name)) {
-      shownMeditations.add(location.name);
+    const dist = getDistance(latitude, longitude, location.lat, location.lon);
+    const key = `${location.lat},${location.lon}`;
+    console.log(`${location.name} is ${dist.toFixed(2)}m away`);
+
+    if (dist < 30 && !shownLocations.has(key)) {
+      shownLocations.add(key);
       showMeditationModal(location);
     }
   });
 }
 
-// modal
+// show modal
 function showMeditationModal(location) {
-  document.getElementById("meditationModalLabel").innerText = location.name;
-  document.getElementById("meditationText").innerText =
-    `You're near ${location.name}. Would you like to begin this meditation?`;
-
-  const audio = document.getElementById("meditationAudio");
-  audio.src = location.audio;
-  audio.load();
-
-  const modal = new bootstrap.Modal(document.getElementById('meditationModal'));
-  modal.show();
-}
-
-// geolocation
-navigator.geolocation.watchPosition(
-  onLocationUpdate,
-  err => alert("Please enable location access to use the map features."),
-  { enableHighAccuracy: true, maximumAge: 1000 }
-);
-
-// log
-document.addEventListener("DOMContentLoaded", renderNotes);
-
-function saveNote() {
-  const type = document.getElementById("meditationType").value;
-  const note = document.getElementById("meditationNote").value.trim();
-  if (!note) return alert("Please write something!");
-
-  const entry = {
-    id: Date.now(),
-    type,
-    note,
-    timestamp: new Date().toLocaleString()
-  };
-
-  const existing = JSON.parse(localStorage.getItem("meditationNotes") || "[]");
-  existing.unshift(entry);
-  localStorage.setItem("meditationNotes", JSON.stringify(existing));
-  document.getElementById("meditationNote").value = "";
-  renderNotes();
-}
-
-function deleteNote(id) {
-  const existing = JSON.parse(localStorage.getItem("meditationNotes") || "[]");
-  const updated = existing.filter(note => note.id !== id);
-  localStorage.setItem("meditationNotes", JSON.stringify(updated));
-  renderNotes();
-}
-
-function renderNotes() {
-  const notes = JSON.parse(localStorage.getItem("meditationNotes") || "[]");
-  const container = document.getElementById("notesList");
-  container.innerHTML = "";
-
-  if (notes.length === 0) {
-    container.innerHTML = "<p class='text-muted'>No notes yet. Your reflections will appear here.</p>";
-    return;
+    document.getElementById("meditationModalLabel").innerText = location.name;
+    document.getElementById("meditationText").innerText =
+      `You're near ${location.name}. Would you like to begin this meditation?`;
+  
+    const audio = document.getElementById("meditationAudio");
+    audio.src = location.audio;
+    audio.load();
+  
+    const startBtn = document.getElementById("startMeditationBtn");
+  
+    // decide which meditation page to link to based on the name
+    if (location.name.toLowerCase().includes("moving")) {
+      startBtn.href = "moving.html";
+    } else if (location.name.toLowerCase().includes("mindfulness")) {
+      startBtn.href = "mindfulness.html";
+    } else if (location.name.toLowerCase().includes("focused")) {
+      startBtn.href = "focused.html";
+    } else {
+      startBtn.href = "#"; // fallback
+    }
+  
+    const modal = new bootstrap.Modal(document.getElementById('meditationModal'));
+    modal.show();
   }
 
-  notes.forEach(note => {
-    const card = document.createElement("div");
-    card.className = "card mb-3";
-    card.innerHTML = `
-      <div class="card-body">
-        <h5 class="card-title">${note.type} Meditation</h5>
-        <h6 class="card-subtitle mb-2 text-muted">${note.timestamp}</h6>
-        <p class="card-text">${note.note}</p>
-        <button class="btn btn-outline-danger btn-sm" onclick="deleteNote(${note.id})">Delete</button>
-      </div>
-    `;
-    container.appendChild(card);
-  });
-}
-
-// breathing cycle
-const instruction = document.getElementById('instruction');
-const breathModal = document.getElementById('breathModal');
-let breathInterval;
-let state = 0;
-
-const cycle = [
-  { action: "Inhale...", duration: 4000 },
-  { action: "Exhale...", duration: 4000 },
-];
-
-function breathingCycle() {
-  const current = cycle[state];
-  instruction.textContent = current.action;
-  state = (state + 1) % cycle.length;
-  breathInterval = setTimeout(breathingCycle, current.duration);
-}
-
-breathModal?.addEventListener('shown.bs.modal', () => {
-  state = 0;
-  breathingCycle();
-});
-
-breathModal?.addEventListener('hidden.bs.modal', () => {
-  clearTimeout(breathInterval);
-});
+// start geolocation
+navigator.geolocation.watchPosition(
+  onLocationUpdate,
+  err => alert("Location access is needed to show meditation spots."),
+  { enableHighAccuracy: true, maximumAge: 1000 }
+);
