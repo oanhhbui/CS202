@@ -24,8 +24,6 @@ const meditationLocations = [
   }
 ];
 
-
-
 // distance from meditation spots
 function getDistance(lat1, lon1, lat2, lon2) {
   const R = 6371e3;
