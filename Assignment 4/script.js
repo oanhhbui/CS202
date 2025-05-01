@@ -5,16 +5,22 @@ const shownLocations = new Set();
 const meditationLocations = [
   {
     name: "Moving Meditation",
-    lat: 48.732479,
-    lon: -122.485844,
+    lat: 48.731718,
+    lon: -122.485382,
     audio: "audio/Guided-Meditation-for-Positive-Energy-Lavendaire.mp3"
   },
   {
     name: "Mindfulness Meditation",
-    lat: 48.732527,
-    lon: -122.484529,
+    lat: 48.731650,
+    lon: -122.485777,
     audio: "audio/Positive-Affirmations-for-Self-Love.mp3"
   },
+  {
+    name: "Focused Meditation",
+    lat: 48.731865,
+    lon: -122.485313
+  },
+
 ];
 
 // get distance from user's location to meditation location in meters
@@ -90,7 +96,7 @@ function showMeditationModal(location) {
     } else if (location.name.toLowerCase().includes("focused")) {
       startBtn.href = "focused.html";
     } else {
-      startBtn.href = "#"; // fallback
+      startBtn.href = "#"; 
     }
   
     const modal = new bootstrap.Modal(document.getElementById('meditationModal'));
