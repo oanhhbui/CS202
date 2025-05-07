@@ -1,0 +1,279 @@
+{
+    "recipes": [
+      {
+        "title": "Vodka Pasta",
+        "description": "For when you're in a creamy pasta mood.",
+        "ingredients": [
+          "1 tablespoon olive oil",
+          "1/4 yellow onion, minced",
+          "2 garlic cloves, minced",
+          "dash of salt",
+          "6 oz tomato paste",
+          "1/4 tsp red pepper flakes",
+          "3 oz vodka",
+          "1 1/4 cup heavy cream",
+          "1 lb pasta",
+          "1/2 cup pasta water",
+          "Minced parsley"
+        ],
+        "prep_time": "10 minutes",
+        "cook_time": "20 minutes",
+        "instructions": [
+            "boil water + cook pasta (save pasta water)",
+            "in a sauce pan, over medium heat, add olive oil",
+            "add minced onion, garlic, and pinch of salt, cook until softened",
+            "pour in tomato paste, red pepper flakes and cook til dark red color",
+            "add vodka and let sizzle",
+            "pour in heavy cream and mix til smooth",
+            "add in cooked pasta into the sauce and pasta water if necessary"
+        ]
+      },
+      {
+        "title": "Gochujang Pasta",
+        "description": "Feeling a lil spice and craving pasta.",
+        "ingredients": [
+          "1 lb pasta",
+          "2 tablespoon olive oil",
+          "salt to taste",
+          "1 cup heavy cream",
+          "1/4 teaspoon smoked paprika",
+          "1/4 salt"
+        ],
+        "prep_time": "5 minutes",
+        "cook_time": "15 minutes",
+        "instructions": [
+            "boil water + cook pasta (save pasta water)",
+            "drizzle olive oil on cooked pasta",
+            "in a pot, add in oil (olive or avocado) over medium heat. once it starts to sizzle, add minced garlic and stir until fragrant. add gochujang pasta and stir until it darkens/caramelizes a little.",
+            "add heavy cream, and some pasta water. stir in until creamy and smooth.",
+            "season with salt, black pepper, paprika",
+            "bring to gentle boil then add cooked pasta  "
+        ]
+      },
+      {
+        "title": "Protein & Spinach Pasta",
+        "description": "Meet the macros, switch out protein of choice (chicken, beef, shrimp).",
+        "ingredients": [
+          "1 lb protein of choice",
+          "8 oz. banza pasta",
+          "3 tablespoon olive oil",
+          "1 teaspoon italian seasoning",
+          "1 teaspoon minced garlic",
+          "1 medium onion, diced",
+          "2 1/2 cup chicken broth",
+          "dash of salt and pepper",
+          "handful of spinach",
+          "1/2 teaspoon crushed red pepper",
+          "a couple diced cherry tomatoes"
+        ],
+        "prep_time": "15 minutes",
+        "cook_time": "15 minutes",
+        "instructions": [
+            "boil water + cook pasta (save pasta water)",
+            "drizzle olive oil on cooked pasta (prevents sticking)",
+            "season the chicken with spices and put in air fryer",
+            "in a pan, add onions, garlic and cook til lightly browned and fragrant.",
+            "stir in spinach, cooked chicken and pasta"
+        ]
+      },
+      {
+        "title": "Spaghetti and Meatballs",
+        "description": "A classic.",
+        "ingredients": [
+          "1 pound spaghetti",
+          "3 slices white bread (crusts removed, diced)",
+          "2/3 cup cold water",
+          "2 lb lean ground beef",
+          "8 cloves garlic, minced (split half)",
+          "1/4 teaspoon smoked paprika",
+          "1 teaspoon salt",
+          "1/2 teaspoon black pepper",
+          "1 large egg",
+          "3/4 cup all purpose flour",
+          "3 tablespoon olive oil",
+          "1 medium onion, chopped",
+          "56 ounce crushed tomatoes",
+          "2 bay leaves",
+          "2 tablespoon basil, finely minced"
+        ],
+        "prep_time": "20 minutes",
+        "cook_time": "45 minutes",
+        "instructions": [
+            "boil water + cook spaghetti (save pasta water)",
+            "combine bread pieces with water, set aside for 5 minutes then mash with a fork",
+            "meatball mixture: in a large bowl add ground beef, parmesan, garlic, salt & pepper, egg, and mashed bread crumbs. mix until well combined",
+            "for the sauce: over medium heat, add oil and onion until soft and golden, stir in garlic until fragrant",
+            "stir in crushed tomatoes and bay leaves, bring to light boil",
+            "add meatballs into sauce and simmer gently for 30 min",
+            "5 minutes before sauce is done, stir in chopped basil and season with salt and pepper"
+        ]
+      },
+      {
+        "title": "Pesto Pasta",
+        "description": "Feeling pesto.",
+        "ingredients": [
+          "8 ounce pasta",
+          "1/2 cup basil pesto",
+          "fresh lemon juice",
+          "4 cups arugula",
+          "2 tablespoon pine nuts",
+          "pinch of red pepper flakes",
+          "dash of salt and pepper"
+        ],
+        "prep_time": "15 minutes",
+        "cook_time": "10 minutes",
+        "instructions": [
+            "boil water + cook pasta (save pasta water)",
+            "drizzle olive oil on cooked pasta",
+            "in a skillet over low heat, add pesto, pasta water and stir to combine",
+            "add pasta and stir until evenly coated, add more pasta water if necessary",
+            "turn off heat and add lemon juice, salt, pepper to taste",
+            "add arugula and garnish with red pepper flakes and pine nuts"
+        ]
+      },
+      {
+        "title": "Spicy Tofu Stew",
+        "description": "Craving a comforting homemade meal.",
+        "ingredients": [
+          "1 tablespoon sesame oil",
+          "3 green onions",
+          "1/4 white onion, finely chopped",
+          "2 garlic cloves, minced",
+          "1 tablespoon korean beef broth powder",
+          "1 cup soup base",
+          "1 package extra soft soon tofu",
+          "2 eggs",
+          "baby bok choy or other veggies",
+          "thinly sliced beef",
+          "any seafood available"
+        ],
+        "prep_time": "10 minutes",
+        "cook_time": "15 minutes",
+        "instructions": [
+            "add sesame oil, garlic, white onion to medium-sized pot over medium-high heat and sauté until fragrant",
+            "add the whites of the onions to the pan and continue to sauté for five to seven minutes",
+            "sprinkle in the chili flakes and beef broth powder, then stir in the soup base liquid and bring to a boil",
+            "add in proteins, veggies, tofu",
+            "crack egg into soup and garnish with green onions"
+        ]
+      },
+      {
+        "title": "Chia Pudding",
+        "description": "Simple breakie.",
+        "ingredients": [
+          "2 tablespoons chia seeds",
+          "1 tablespoon honey",
+          "1/2 cup milk of choice"
+        ],
+        "prep_time": "5 minutes",
+        "instructions": [
+            "add in all ingredients and let it sit overnight in the fridge",
+            "once mixture thickens, add in greek yogurt",
+            "top with fruits, coconut flakes, hemp seeds, etc."
+        ]
+      },
+      {
+        "title": "Cheesecake",
+        "description": "The best base.",
+        "ingredients": [
+          "5.3 ounce graham cracker",
+          "1/4 cup melted butter",
+          "10.5 ounce cream cheese",
+          "1/2 cup sugar",
+          "1 teaspoon vanilla extract",
+          "1 1/2 tablespoon all purpose flour",
+          "6.5 ounce sour cream"
+        ],
+        "prep_time": "10 minutes",
+        "cook_time": "15 minutes",
+        "instructions": [
+            "preheat oven to 320 Fahrenheit",
+            "crush graham cracker into very fine bits and pour melted butter in and mix",
+            "scoop into a tray and set aside",
+            "whisk cream cheese until creamy on low speed",
+            "add sugar bit by bit until combined",
+            "add egg one by one",
+            "add vanilla extract, flour, sour cream and mix",
+            "scoop into base and bake for 15 minutes (check by shaking gently and see if they wiggle then the center is almost set)",
+            "leave to cool completely then chill in fridge overnight"
+        ]
+      },
+      {
+        "title": "Vegan Chocolate Chip Cookies",
+        "description": "Yummyness!",
+        "ingredients": [
+          "1/4 cup granulated sugar",
+          "1/4 brown sugar",
+          "1 cup melted coconut oil",
+          "1/2 teaspoon salt",
+          "1/4 cup dairy free milk",
+          "1 1/4 cup all purpose flour",
+          "1 teaspoon vanilla extract",
+          "1/2 teaspoon baking soda",
+          "1 tablespoon cornstarch"
+        ],
+        "prep_time": "15 minutes",
+        "cook_time": "17 minutes",
+        "instructions": [
+            "preheat oven to 350 Fahrenheit",
+            "in a mixer, add both sugar, coconut oil, and salt, mix til combine",
+            "add in milk, vanilla extract and stir til everything is smooth",
+            "sift in flour, baking soda, cornstarch, chocolate chips and fold carefully",
+            "chill in fridge (the longer the better)",
+            "scoop into tray and bake for 17 minutes"
+        ]
+      },
+      {
+        "title": "Chocolate Chip Banana Bread",
+        "description": "For the SUPER ripe bananas.",
+        "ingredients": [
+          "3 ripe bananas",
+          "1/3 cup melted coconut oil",
+          "1 large egg",
+          "1/2 cup light brown sugar",
+          "1 teaspoon vanilla extract",
+          "1/4 teaspoon salt",
+          "1 1/2 cup flour",
+          "1/2 teaspoon ground cinnamon",
+          "1 teaspoon baking soda",
+          "1/2 cup chocolate chips",
+          "1/4 cup walnuts"
+        ],
+        "prep_time": "10 minutes",
+        "cook_time": "50 minutes",
+        "instructions": [
+            "preheat oven to 350 Fahrenheit and grease loaf pan",
+            "in a mixer, puree bananas and stir in coconut oil, vanilla extract, egg, brown sugar",
+            "stir in flour, salt, cinnamon, baking soda and fold in chocolate chips and walnuts",
+            "bake for 50 minutes and test with toothpick"
+        ]
+      },
+      {
+        "title": "Nui Soup",
+        "description": "Craving soup",
+        "ingredients": [
+          "1.75 lbs meaty pork ribs (separated into individual ribs)",
+          "6 cups hot water",
+          "1 1/2 teaspoon salt",
+          "1-inch piece of ginger",
+          "9-10 oz carrots, peeled and divided (about 2 medium to large carrots)",
+          "9-10 oz daikon radish, peeled and divided",
+          "6-8 oz your choice of short pasta",
+          "thinly sliced scallions",
+          "thinly sliced cilantro"
+        ],
+        "prep_time": "15 minutes",
+        "cook_time": "1 hour 15 minutes",
+        "instructions": [
+            "parboil pork ribs in boiling water",
+            "in big pot, add water, ginger, salt, pork ribs and bring to a boil then lower to a simmer (skim off foam)",
+            "cover pot with lid and simmer for 60-75 minutes",
+            "add veggies to soup",
+            "cook pasta noodles",
+            "taste soup and season to liking",
+            "add everything together once done and garnish with scallion, cilantro"
+        ]
+      }
+    ]
+}
+  
