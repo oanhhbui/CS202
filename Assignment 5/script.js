@@ -1,18 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
     fetch('recipes.json')
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to load recipes.json');
-        return res.json();
-      })
+      .then(res => res.json())
       .then(data => {
-        if (!data.recipes) throw new Error('Invalid JSON structure: Missing "recipes" key');
-        renderRecipes(data.recipes);
+        if (!data.recipes) throw new Error('Invalid JSON structure');
+  
+        let filteredRecipes = [];
+  
+        switch (filterCategory) {
+        // only favorite recipes go in favorites
+          case 'favorite':
+            filteredRecipes = data.recipes.filter(r => r.favorite === true);
+            break;
+
+        // matches each category
+          case 'pasta':
+          case 'mealprep':
+          case 'sweettreat':
+            filteredRecipes = data.recipes.filter(r => r.category === filterCategory);
+            break;
+
+        // default all recipe to home page
+          case 'all':
+          default:
+            filteredRecipes = data.recipes;
+            break;
+        }
+  
+        renderRecipes(filteredRecipes);
       })
-      .catch(error => {
-        console.error('Error loading recipes:', error);
-        const container = document.getElementById('recipes');
-        container.innerHTML = `<p style="color:red;">Failed to load recipes. Check console for details.</p>`;
-      });
   });
   
   function renderRecipes(recipes) {
@@ -20,33 +35,55 @@ document.addEventListener('DOMContentLoaded', () => {
     recipes.forEach(recipe => {
       const card = document.createElement('div');
       card.className = 'recipe';
+  
+      // image at the front of each recipe card
+      const imageTag = recipe.image
+        ? `<img src="${recipe.image}" alt="${recipe.title}" class="recipe-img">`
+        : '';
+  
       card.innerHTML = `
+        ${imageTag}
         <h2>${recipe.title}</h2>
         <p>${recipe.description}</p>
       `;
+  
       card.addEventListener('click', () => openModal(recipe));
       container.appendChild(card);
     });
   }
   
+  // modal recipe content 
   function openModal(recipe) {
     const modal = document.createElement('div');
     modal.className = 'modal-overlay';
   
     const ingredientsList = recipe.ingredients
-        ? recipe.ingredients.map(i => `<li>${i}</li>`).join('')
-        : '<li>No ingredients listed.</li>';
-    
+      ? recipe.ingredients.map(i => `<li>${i}</li>`).join('')
+      : '<li>No ingredients listed.</li>';
+  
     const instructionsList = recipe.instructions
-        ? recipe.instructions.map(i => `<li>${i}</li>`).join('')
-        : '<li>No instructions listed.</li>';
-    
-    // content inside modal pop up for detail recipe
+      ? recipe.instructions.map(i => `<li>${i}</li>`).join('')
+      : '<li>No instructions listed.</li>';
+  
+    // embed the video
+    let videoEmbed = '';
+    if (recipe.video) {
+      if (recipe.video.includes('youtube.com') || recipe.video.includes('youtu.be')) {
+        const videoId = recipe.video.split('v=')[1]?.split('&')[0] || recipe.video.split('/').pop();
+        videoEmbed = `
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>
+          </div>
+        `;
+      }
+    }
+  
     modal.innerHTML = `
       <div class="modal-content">
         <span class="close-button">&times;</span>
         <h2>${recipe.title}</h2>
         <p>${recipe.description || 'No description available.'}</p>
+        ${videoEmbed}
         <h4>Ingredients:</h4>
         <ul>${ingredientsList}</ul>
         <p><strong>Prep time:</strong> ${recipe.prep_time || 'N/A'}</p>
@@ -55,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <ul>${instructionsList}</ul>
       </div>
     `;
-  
     document.body.appendChild(modal);
   
     modal.querySelector('.close-button').addEventListener('click', () => {
@@ -66,4 +102,3 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target === modal) document.body.removeChild(modal);
     });
   }
-  

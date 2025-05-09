@@ -3,6 +3,11 @@
       {
         "title": "Vodka Pasta",
         "description": "For when you're in a creamy pasta mood.",
+        "category": "pasta",
+        "favorite": false,
+        "pasta": true,
+        "mealprep": false,
+        "sweettreat": false,
         "ingredients": [
           "1 tablespoon olive oil",
           "1/4 yellow onion, minced",
@@ -26,11 +31,18 @@
             "add vodka and let sizzle",
             "pour in heavy cream and mix til smooth",
             "add in cooked pasta into the sauce and pasta water if necessary"
-        ]
+        ],
+        "image": "images/vodkapasta.jpg",
+        "hyperlink": "https://www.acozykitchen.com/one-pot-vodka-pasta#wprm-recipe-container-38367"
       },
       {
         "title": "Gochujang Pasta",
         "description": "Feeling a lil spice and craving pasta.",
+        "category": "pasta",
+        "favorite": true,
+        "pasta": true,
+        "mealprep": false,
+        "sweettreat": false,
         "ingredients": [
           "1 lb pasta",
           "2 tablespoon olive oil",
@@ -48,11 +60,18 @@
             "add heavy cream, and some pasta water. stir in until creamy and smooth.",
             "season with salt, black pepper, paprika",
             "bring to gentle boil then add cooked pasta  "
-        ]
+        ],
+        "image": "images/gochujangpasta.jpg",
+        "hyperlink": "https://www.sunglowkitchen.com/gochujang-pasta/#recipe" 
       },
       {
         "title": "Protein & Spinach Pasta",
         "description": "Meet the macros, switch out protein of choice (chicken, beef, shrimp).",
+        "category": "pasta",
+        "favorite": false,
+        "pasta": true,
+        "mealprep": false,
+        "sweettreat": false,
         "ingredients": [
           "1 lb protein of choice",
           "8 oz. banza pasta",
@@ -74,11 +93,18 @@
             "season the chicken with spices and put in air fryer",
             "in a pan, add onions, garlic and cook til lightly browned and fragrant.",
             "stir in spinach, cooked chicken and pasta"
-        ]
+        ],
+        "image": "images/spinachpasta.jpg",
+        "hyperlink": "https://www.fromvalerieskitchen.com/chicken-and-spinach-skillet-pasta/#wprm-recipe-container-57841" 
       },
       {
         "title": "Spaghetti and Meatballs",
         "description": "A classic.",
+        "category": "pasta",
+        "favorite": true,
+        "pasta": true,
+        "mealprep": false,
+        "sweettreat": false,
         "ingredients": [
           "1 pound spaghetti",
           "3 slices white bread (crusts removed, diced)",
@@ -106,11 +132,19 @@
             "stir in crushed tomatoes and bay leaves, bring to light boil",
             "add meatballs into sauce and simmer gently for 30 min",
             "5 minutes before sauce is done, stir in chopped basil and season with salt and pepper"
-        ]
+        ],
+        "image": "images/spaghettimeatballs.jpg",
+        "video": "https://www.youtube.com/watch?v=YyCRnAZ4eCc&embeds_referring_euri=https%3A%2F%2Fnatashaskitchen.com%2F&source_ve_path=MjM4NTE",
+        "hyperlink": "https://natashaskitchen.com/spaghetti-and-meatballs-recipe/" 
       },
       {
         "title": "Pesto Pasta",
         "description": "Feeling pesto.",
+        "category": "pasta",
+        "favorite": false,
+        "pasta": true,
+        "mealprep": false,
+        "sweettreat": false,
         "ingredients": [
           "8 ounce pasta",
           "1/2 cup basil pesto",
@@ -129,11 +163,18 @@
             "add pasta and stir until evenly coated, add more pasta water if necessary",
             "turn off heat and add lemon juice, salt, pepper to taste",
             "add arugula and garnish with red pepper flakes and pine nuts"
-        ]
+        ],
+        "image": "images/pestopasta.jpg",
+        "hyperlink": "https://www.loveandlemons.com/pesto-pasta/#wprm-recipe-container-45723" 
       },
       {
         "title": "Spicy Tofu Stew",
         "description": "Craving a comforting homemade meal.",
+        "category": "favorite",
+        "favorite": true,
+        "pasta": false,
+        "mealprep": false,
+        "sweettreat": false,
         "ingredients": [
           "1 tablespoon sesame oil",
           "3 green onions",
@@ -155,11 +196,19 @@
             "sprinkle in the chili flakes and beef broth powder, then stir in the soup base liquid and bring to a boil",
             "add in proteins, veggies, tofu",
             "crack egg into soup and garnish with green onions"
-        ]
+        ],
+        "image": "images/tofustew.webp",
+        "video": "https://www.youtube.com/watch?v=SeRyTHVbFdg&t=123s",
+        "hyperlink": "https://cookingwithremi.com/recipes/sundubu" 
       },
       {
         "title": "Chia Pudding",
         "description": "Simple breakie.",
+        "category": "mealprep",
+        "favorite": false,
+        "pasta": false,
+        "mealprep": true,
+        "sweettreat": false,
         "ingredients": [
           "2 tablespoons chia seeds",
           "1 tablespoon honey",
@@ -170,11 +219,17 @@
             "add in all ingredients and let it sit overnight in the fridge",
             "once mixture thickens, add in greek yogurt",
             "top with fruits, coconut flakes, hemp seeds, etc."
-        ]
+        ],
+        "image": "images/chiapudding.jpg"
       },
       {
         "title": "Cheesecake",
         "description": "The best base.",
+        "category": "sweettreat",
+        "favorite": false,
+        "pasta": false,
+        "mealprep": false,
+        "sweettreat": true,
         "ingredients": [
           "5.3 ounce graham cracker",
           "1/4 cup melted butter",
@@ -196,11 +251,17 @@
             "add vanilla extract, flour, sour cream and mix",
             "scoop into base and bake for 15 minutes (check by shaking gently and see if they wiggle then the center is almost set)",
             "leave to cool completely then chill in fridge overnight"
-        ]
+        ],
+        "image": "images/cheesecake.jpg"
       },
       {
         "title": "Vegan Chocolate Chip Cookies",
         "description": "Yummyness!",
+        "category": "sweettreat",
+        "favorite": false,
+        "pasta": false,
+        "mealprep": false,
+        "sweettreat": true,
         "ingredients": [
           "1/4 cup granulated sugar",
           "1/4 brown sugar",
@@ -221,11 +282,17 @@
             "sift in flour, baking soda, cornstarch, chocolate chips and fold carefully",
             "chill in fridge (the longer the better)",
             "scoop into tray and bake for 17 minutes"
-        ]
+        ],
+        "image": "images/chocolatechipcookies.jpg"
       },
       {
         "title": "Chocolate Chip Banana Bread",
         "description": "For the SUPER ripe bananas.",
+        "category": "sweettreat",
+        "favorite": true,
+        "pasta": false,
+        "mealprep": false,
+        "sweettreat": true,
         "ingredients": [
           "3 ripe bananas",
           "1/3 cup melted coconut oil",
@@ -246,11 +313,18 @@
             "in a mixer, puree bananas and stir in coconut oil, vanilla extract, egg, brown sugar",
             "stir in flour, salt, cinnamon, baking soda and fold in chocolate chips and walnuts",
             "bake for 50 minutes and test with toothpick"
-        ]
+        ],
+        "image": "images/chocolatechipbananabread.jpg",
+        "hyperlink": "https://realandvibrant.com/chocolate-chip-banana-bread/#recipech" 
       },
       {
         "title": "Nui Soup",
         "description": "Craving soup",
+        "category": "all",
+        "favorite": true,
+        "pasta": false,
+        "mealprep": false,
+        "sweettreat": false,
         "ingredients": [
           "1.75 lbs meaty pork ribs (separated into individual ribs)",
           "6 cups hot water",
@@ -272,8 +346,308 @@
             "cook pasta noodles",
             "taste soup and season to liking",
             "add everything together once done and garnish with scallion, cilantro"
-        ]
+        ],
+        "image": "images/nui.jpg",
+        "video": "https://www.youtube.com/watch?v=e4e0cfr0cdU",
+        "hyperlink": "https://delightfulplate.com/vietnamese-macaroni-soup-with-pork-ribs/#recipe" 
+      },
+      {
+        "title": "Matcha Latte",
+        "description": "Caffeinated!!",
+        "category": "all",
+        "favorite": false,
+        "pasta": false,
+        "mealprep": false,
+        "sweettreat": false,
+        "ingredients": [
+          "1 teaspoon matcha",
+          "2 teaspoon honey",
+          "1 tablespoon hot water",
+          "3/4 cup milk of choice"
+        ],
+        "prep_time": "5",
+        "instructions": [
+            "sift in matcha into cup",
+            "add water and whisk in m motion",
+            "add in honey",
+            "grab cup filled with ice and fill with milk",
+            "add in matcha mixture, and stir"
+        ],
+        "image": "images/matchalatte.jpg",
+        "hyperlink": "https://www.sunglowkitchen.com/gochujang-pasta/#recipe" 
+      },
+      {
+        "title": "Stir-fried Fish Cake",
+        "description": "Yummy side dish",
+        "category": "all",
+        "favorite": false,
+        "pasta": false,
+        "mealprep": false,
+        "sweettreat": false,
+        "ingredients": [
+          "8 ounces eomuk",
+          "1/4 medium onion",
+          "1 teaspoon minced garlic",
+          "1/2 scallion",
+          "1 red chili pepper",
+          "1 green chili pepper",
+          "oil for stir frying",
+          "2 tablespoons soy sauce",
+          "1 tablespoon rice wine",
+          "1 teaspoon sugar",
+          "2-3 teaspoons gochugaru"
+        ],
+        "prep_time": "10 minutes",
+        "cook_time": "10 minutes",
+        "instructions": [
+            "bring medium pot of water to a boil",
+            "plunge fish cake for 30 seconds, drain and cool",
+            "cut fish cake into sizable pieces and thinly slice veggies",
+            "heat non-stick pan and add garlic, onions, scallions and cook for a minute",
+            "add fish cake and chili peppers, stir fry for about a minute",
+            "add sauce ingredients over fish cake and veggies"
+        ],
+        "image": "images/fishcake.jpg",
+        "video": "https://www.youtube.com/watch?v=gkQszDu2sKM&embeds_referring_euri=https%3A%2F%2Fwww.koreanbapsang.com%2F&source_ve_path=MjM4NTE",
+        "hyperlink": "https://www.koreanbapsang.com/eomuk-bokkem-stir-fried-fish-cake/fis" 
+      },
+      {
+        "title": "Hot Honey Ground Beef Bowl",
+        "description": "Hella protein packed.",
+        "category": "mealprep",
+        "favorite": false,
+        "pasta": false,
+        "mealprep": true,
+        "sweettreat": false,
+        "ingredients": [
+          "1 1/2 pound sweet potato, diced into small cubes",
+          "salt, pepper, cinnamon",
+          "1 pound lean ground beef",
+          "1 tablespoon tomato paste",
+          "1 tablespoon taco seasoning",
+          "2 cups greek yogurt",
+          "2 avocados",
+          "2 tablespoons hot honey"
+        ],
+        "prep_time": "15 minutes",
+        "cook_time": "30 minutes",
+        "instructions": [
+            "preheat oven to 425F",
+            "season sweet potatoes and bake for 30 min, flipping occasionally",
+            "in frying pan on medium high heat, add ground beef and cook for five min",
+            "add tomato paste, taco seasoning, splash of water and cook for 1-2 min",
+            "add everything together and drizzle hot honey"
+        ],
+        "image": "images/hothoneybowl.jpeg",
+        "video": "https://www.youtube.com/watch?v=u9Xcc6kdeI0h",
+        "hyperlink": "https://myproteinpantry.com/hot-honey-ground-beef-bowls/#wprm-recipe-container-5013" 
+      },
+      {
+        "title": "Ground Turkey Spaghetti Squash Boats",
+        "description": "Healthy and delicious, packed with protein and fiber.",
+        "category": "all",
+        "favorite": false,
+        "pasta": false,
+        "mealprep": false,
+        "sweettreat": false,
+        "ingredients": [
+          "2 small spaghetti squash",
+          "2 tsp olive oil",
+          "dash of salt and pepper",
+          "1 oz parmesan cheese",
+          "fresh basil",
+          "1 pound lean ground turkey",
+          "2 tablespoon tomato paste",
+          "24 ounce marinara sauce",
+          "14.5 ounce petite diced tomatoes",
+          "1 teaspoon dried basil",
+          "1 teaspoon dried oregano",
+          "1 teaspoon ground thyme",
+          "pinch of red pepper flakes"
+        ],
+        "prep_time": "15 minutes",
+        "cook_time": "30 minutes",
+        "instructions": [
+            "preheat oven to 400F",
+            "cut squash in half, remove seeds",
+            "drizzle olive oil and season with salt and pepper",
+            "place face down and poke with a fork, bake for 30 minutes",
+            "in large skillet over medium high heat, add olive oil and turkey",
+            "cook turkey and season",
+            "add tomato paste, marinara sauce, diced tomatoes, basil, oregano, thyme, red pepper flakes and stir and let simmer for 10-20 minutes",
+            "after squash is done baking, let cool slightly shred with forks",
+            "fill with sauce and top with basil"
+        ],
+        "image": "images/spaghettiboat.jpg",
+        "hyperlink": "https://myproteinpantry.com/ground-turkey-spaghetti-squash-boats/#wprm-recipe-container-3890sp" 
+      },
+      {
+        "title": "Snicker Dates",
+        "description": "For when you're craving a sweet treat.",
+        "category": "sweettreat",
+        "favorite": true,
+        "pasta": false,
+        "mealprep": false,
+        "sweettreat": true,
+        "ingredients": [
+          "Medjool dates, pitted",
+          "2 tablespoon peanut butter",
+          "dark chocolate",
+          "sea salt"
+        ],
+        "prep_time": "15 minutes",
+        "instructions": [
+            "spread peanut butter into middle of each date",
+            "melt chocolate and dup each dare into chocolate",
+            "finish with pinch of sea salt",
+            "transfer to freezer to harden chocolate"
+        ],
+        "image": "images/dates.jpg",
+        "hyperlink": "https://myproteinpantry.com/date-snickers/d" 
+      },
+      {
+        "title": "Ground Beef Taco Bowls",
+        "description": "Meal Prep Option.",
+        "category": "mealprep",
+        "favorite": false,
+        "pasta": false,
+        "mealprep": true,
+        "sweettreat": false,
+        "ingredients": [
+          "1 pound ground beef",
+          "1 packet taco seasoning",
+          "1/3 cup water",
+          "1 tablespoon tomato paste",
+          "1 red onion, sliced",
+          "1 tablespoon olive oil",
+          "2 cups cooked white rice",
+          "2 cups chopped romaine lettuce",
+          "1 avocado"
+        ],
+        "prep_time": "10 minutes",
+        "cook_time": "20 minutes",
+        "instructions": [
+            "in large skillet over medium, saute ground beef then add in tomato paste",
+            "mix in taco seasoning and water, reduce heat to low and let simmer",
+            "in another skillet, add onions and saute for 5-7 minutes",
+            "assemble bowl"
+        ],
+        "image": "images/groundbeeftacobowls.jpg",
+        "hyperlink": "https://eatwithclarity.com/ground-beef-taco-bowls/#wprm-recipe-container-47723" 
+      },
+      {
+        "title": "Spicy Korean Gochujang Noddles",
+        "description": "Spicy and sweet moment",
+        "category": "all",
+        "favorite": false,
+        "pasta": false,
+        "mealprep": false,
+        "sweettreat": false,
+        "ingredients": [
+          "1 pound ground beef",
+          "12 ounce rice noodles",
+          "1/4 cup soy sauce",
+          "2 teaspoons tomato paste",
+          "2 tablespoons coconut cream",
+          "2 tablespoons water",
+          "2 tablespoons honey",
+          "1 tablespoon rice vinegar",
+          "2 teaspoons minced garlic",
+          "1 teaspoon fresh grated ginger",
+          "pinch of red pepper flakes"
+        ],
+        "prep_time": "10 minutes",
+        "cook_time": "20 minutes",
+        "instructions": [
+            "cook noodles",
+            "in large skillet, saute ground beef",
+            "in a bowl, whisk together all ingredients and set aside for the sauce",
+            "add in half the sauce to noodles and mix well",
+            "add in ground meet beef and rest of sauce",
+            "garnish with scallions, sesame seeds, cilantro and red pepper flakes"
+        ],
+        "image": "images/koreangochujangnoodles.jpg",
+        "hyperlink": "https://eatwithclarity.com/korean-gochujang-noodles/g" 
+      },
+      {
+        "title": "Ground Turkey Bowl",
+        "description": "Easy meal prep",
+        "category": "mealprep",
+        "favorite": false,
+        "pasta": false,
+        "mealprep": true,
+        "sweettreat": false,
+        "ingredients": [
+          "1 pound lean ground turkey",
+          "1 teaspoon chili powder",
+          "1 teaspoon smoked paprika",
+          "1/4 teaspoon ground turmeric",
+          "2 large sweet potatoes, chopped",
+          "3 cups kale, chopped 1 large bunch",
+          "1/2 lemon, juiced",
+          "1 teaspoon olive oil",
+         " 1/2 cucumber, sliced",
+          "1 1/2 cups cherry tomatoes",
+         " 1 cup sliced carrots",
+          "salt and black pepper",
+          "1/2 cup and 2 tablespoon PB2",
+          "1/4 cup water",
+          "2 tablespoon honey",
+          "1/2 lemon, juiced",
+          "dash of cayenne pepper and salt"
+
+        ],
+        "prep_time": "10 minutes",
+        "cook_time": "30 minutes",
+        "instructions": [
+            "whisk apple cider vinegar, honey, salt, water",
+            "place red onion, garlic in mason jar and pour vinegar mixture and let sit for 1 hour",
+            "preheat oven to 425F, season and bake sweet potatoes for 25-30 minutes",
+            "in a pan over medium heat, add ground turkey and add chili powder, smoked paprika, tumeric to season",
+            "add kale to a bowl with olive oil, salt, lemon juice and massage for a few minutes",
+            "for peanut sauce, add pb2 and water in a bowl, forming a peanut butter paste",
+            "add remaining ingredients to bowl and mix well",
+            "assemble bowl with all ingredients!"
+        ],
+        "image": "images/groundturkeybowls.jpg",
+        "hyperlink": "https://ohsnapmacros.com/ground-turkey-bowls/#recipe" 
+      },
+      {
+        "title": "Viet Sweet and Sour Soup",
+        "description": "my fav soup!",
+        "category": "all",
+        "favorite": true,
+        "pasta": false,
+        "mealprep": false,
+        "sweettreat": false,
+        "ingredients": [
+            "4-6 catfish steaks",
+            "3-5 cloves of garlic, minced",
+            "2 Thai chilis, sliced",
+            "2 stalks of lemongrass, with the ends bruised",
+            "2 tomatoes, cut into wedges",
+            "1 cup pineapple chunks",
+            "10 oz bean sprouts",
+            "5-8 springs of rice paddy herb (ngo om), chopped",
+            "1 handful of fried shallots",
+            "1/2 cup tamarind concentrate",
+            "1/3 cup fish sauce",
+            "3 tablespoon sugar",
+            "6 cups of water"
+        ],
+        "prep_time": "15 minutes",
+        "cook_time": "25 minutes",
+        "instructions": [
+            "in a big pot, heat up oil over medium heat",
+            "add minced garlic, thai chilis, lemongrass and saute until garlic begins to change color",
+            "add tamarind concentrate, fish sauce, sugar and mix well until it comes to a boil",
+            "add 6 cups of water, tomatoes, pineapples, turn heat to high, bring to a boil",
+            "lower heat to medium low, cover and simmer for 10 minutes",
+            "add in catfish and bring back to boil",
+            "add in bean sprouts and it's ready to eat!"
+        ],
+        "image": "images/canhchua.jpg",
+        "hyperlink": "https://www.theseasonedwok.com/canh-chua-vietnamese-sour-soup/#recipec" 
       }
     ]
 }
-  
