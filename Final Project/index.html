@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Combo&family=Cormorant:wght@500&family=Delicious+Handrawn&family=Mansalva&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital@0;1&family=Original+Surfer&display=swap" rel="stylesheet">
+    <title>Recipe Archives</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Oanh's Recipe Archives</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li class="dropdown">
+              <a>Type</a>
+            <ul class="dropdown-menu">
+              <li><a href="pasta.html">Pasta</a></li>
+            <li><a href="mealprep.html">Meal Prep</a></li>
+            <li><a href="sweettreat.html">Sweet Treat</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="filter-container">
+        <h2>Feeling Indecisive?</h2>
+      <div class="filter-group">
+        <label for="diet">Dietary Preference:</label>
+        <select id="diet">
+          <option value="">All</option>
+          <option value="dairyfree">Dairy Free</option>
+          <option value="glutenfree">Gluten Free</option>
+        </select>
+      </div>
+    
+      <div class="filter-group">
+        <label for="cuisine">Cuisine Type:</label>
+        <select id="cuisine">
+          <option value="">All</option>
+          <option value="italian">Italian</option>
+          <option value="mexican">Korean</option>
+          <option value="asian">Vietnamese</option>
+        </select>
+      </div>
+    
+      <div class="filter-group">
+        <label for="prepTime">Preparation Time:</label>
+        <select id="prepTime">
+          <option value="">All</option>
+          <option value="under15">Under 15 Min</option>
+          <option value="under30">Under 30 Min</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="Craving">Cravings?</label>
+        <select id="craving">
+          <option value="">All</option>
+          <option value="carbs">Carbs</option>
+          <option value="meat">Meat</option>
+          <option value="soupy">Soup</option>
+          <option value="sweets">Sweets</option>
+        </select>
+      </div>
+    
+      <button id="filterButton">Apply Filters</button>
+    </div>
+
+      <div id="recipes" class="recipes-container"></div>
+     
+      
+      
+      <script>
+        const filterCategory = 'all';
+      </script>
+    </main>
+  
+    <script src="script.js"></script>
+  </body>
+</html>

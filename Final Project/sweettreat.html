@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Combo&family=Delicious+Handrawn&family=Mansalva&family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+    <title>Recipe Archives</title>
+  </head>
+  <body >
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Oanh's Recipe Archives</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li class="dropdown">
+              <a>Type</a>
+            <ul class="dropdown-menu">
+              <li><a href="pasta.html">Pasta</a></li>
+            <li><a href="mealprep.html">Meal Prep</a></li>
+            <li><a href="sweettreat.html">Sweet Treat</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+      <div id="recipes" class="recipes-container"></div>
+      
+      <script>
+        const filterCategory = 'sweettreat';
+      </script>
+    <script src="script.js"></script>
+  </body>
+</html>
