@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.body.dataset.page || 'index';
 
-  if (page === 'index' || page === 'favorites') {
+  if (['index', 'favorites', 'notes'].includes(page)) {
     fetch('recipes.json')
       .then(res => res.json())
       .then(data => {
@@ -15,11 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // shows only recipes in index pg
         if (page === 'index') renderRecipes(allRecipes, 'recipes', false);
         
+        if (page === 'notes') {
+          renderNotesPage();
+        };
         // shows only recipes in favorites pg
         if (page === 'favorites') {
           const favIds = loadFavorites();
           const favRecipes = allRecipes.filter(r => favIds.has(String(r.id)));
           renderRecipes(favRecipes, 'favoritesContainer', true);
+        }else if (page === 'notes') {
+          renderNotesPage();
         }
       })
 
@@ -35,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const cuisine = document.getElementById('cuisine').value.toLowerCase();
       const prepTime = document.getElementById('prepTime').value.toLowerCase();
       const craving = document.getElementById('craving').value.toLowerCase();
+      const mealPrep = document.getElementById('mealPrep').value.toLowerCase();
 
       let filtered = JSON.parse(localStorage.getItem('allRecipes')) || [];
 
@@ -53,10 +59,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (craving) {
         filtered = filtered.filter(r => {
-          const c1 = (r.craving || '').toLowerCase().trim();
-          const c2 = (r.cravings || '').toLowerCase().trim();
-          return c1.includes(craving) || c2.includes(craving);
+          const dataCraving = r.craving;
+          // array data from json passing through
+          if (Array.isArray(dataCraving)) {
+            return dataCraving.some(c => c.toLowerCase().includes(craving));
+          } else if (typeof dataCraving === 'string') {
+            return dataCraving.toLowerCase().includes(craving);
+          } else {
+            return false;
+          }
         });
+      }
+
+      if (mealPrep === 'true') {
+        filtered = filtered.filter(r => r.mealprep === true);
       }
 
       renderRecipes(filtered, 'recipes', false);
@@ -149,6 +165,41 @@ function renderRecipes(recipes, containerId = 'recipes', isFavoritesPage = false
     container.appendChild(card);
   });
 }
+//notes page
+function renderNotesPage() {
+  const container = document.getElementById('notesContainer');
+  const allRecipes = JSON.parse(localStorage.getItem('allRecipes')) || [];
+
+  if (allRecipes.length === 0) {
+    container.innerHTML = '<p>No recipes found.</p>';
+    return;
+  }
+
+  allRecipes.forEach(recipe => {
+    const notesKey = `notes_${recipe.id}`;
+    const savedNote = localStorage.getItem(notesKey) || '';
+
+    const noteCard = document.createElement('div');
+    noteCard.className = 'note-card';
+    noteCard.innerHTML = `
+      <h3>${recipe.title}</h3>
+      <textarea rows="4" placeholder="Add your thoughts...">${savedNote}</textarea>
+      <button data-id="${recipe.id}">Save Note</button>
+    `;
+
+    const saveBtn = noteCard.querySelector('button');
+    const textArea = noteCard.querySelector('textarea');
+
+    saveBtn.addEventListener('click', () => {
+      localStorage.setItem(notesKey, textArea.value.trim());
+      saveBtn.textContent = 'Saved!';
+      setTimeout(() => (saveBtn.textContent = 'Save Note'), 1500);
+    });
+
+    container.appendChild(noteCard);
+  });
+}
+
 
 // modal for recipe details
 async function openModal(recipe) {
@@ -251,3 +302,4 @@ async function openModal(recipe) {
     if (e.target === modal) document.body.removeChild(modal);
   });
 }
+

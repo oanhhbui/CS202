@@ -94,6 +94,7 @@
         "cuisine": "italian",
         "craving": ["carbs", "meat"],
         "favorite": true,
+        "mealprep": true,
         "ingredients": [
           "1 pound spaghetti",
           "3 slices white bread (crusts removed, diced)",
@@ -189,6 +190,7 @@
       {
         "title": "Chia Pudding",
         "description": "Simple breakie.",
+        "mealprep": true,
         "ingredients": [
           "2 tablespoons chia seeds",
           "1 tablespoon honey",
@@ -371,6 +373,7 @@
       {
         "title": "Hot Honey Ground Beef Bowl",
         "description": "Hella protein packed.",
+        "mealprep": true,
         "ingredients": [
           "1 1/2 pound sweet potato, diced into small cubes",
           "salt, pepper, cinnamon",
@@ -397,7 +400,7 @@
       {
         "title": "Ground Turkey Spaghetti Squash Boats",
         "description": "Healthy and delicious, packed with protein and fiber.",
-        "category": "all",
+        "mealprep": true,
         "ingredients": [
           "2 small spaghetti squash",
           "2 tsp olive oil",
@@ -454,6 +457,7 @@
         "title": "Ground Beef Taco Bowls",
         "description": "Meal Prep Option.",
         "craving":"meat",
+        "mealprep": true,
         "ingredients": [
           "1 pound ground beef",
           "1 packet taco seasoning",
@@ -511,6 +515,7 @@
         "title": "Ground Turkey Bowl",
         "description": "Easy meal prep",
         "craving":"meat",
+        "mealprep": true,
         "ingredients": [
           "1 pound lean ground turkey",
           "1 teaspoon chili powder",
@@ -816,6 +821,7 @@
         "title": "Magnolian Beef",
         "description": "Real juicy meat.",
         "craving":"meat",
+        "mealprep": true,
         "ingredients": [
           "11 oz beef (New York steak or flank steak)",
           "1 teaspoon baking soda",

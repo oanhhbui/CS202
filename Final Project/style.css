@@ -232,3 +232,40 @@ body {
   #filterButton:hover {
     background: #c45e4f;
   }
+
+  /* notes page */
+  .note-card {
+    background: #fff8f6;
+    border: 1px solid #e7bcb4;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 15px auto;
+    max-width: 500px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .note-card h3 {
+    margin: 0 0 10px;
+  }
+  
+  .note-card textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-family: inherit;
+  }
+  
+  .note-card button {
+    background-color: #d97a66;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  
+  .note-card button:hover {
+    background-color: #c45e4f;
+  }
