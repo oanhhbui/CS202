@@ -1,32 +1,103 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const page = document.body.dataset.page || 'index';
 
-  fetch('recipes.json')
-    .then(res => res.json())
-    .then(data => {
-      if (!data.recipes) throw new Error('Invalid JSON structure');
+  if (page === 'index' || page === 'favorites') {
+    fetch('recipes.json')
+      .then(res => res.json())
+      .then(data => {
+        // Assign unique IDs to recipes if missing
+        data.recipes.forEach((r, idx) => {
+          if (!r.id) r.id = String(idx + 1);
+        });
 
-      let filteredRecipes;
-      switch (filterCategory) {
-        case 'favorite':
-          filteredRecipes = data.recipes.filter(r => r.favorite === true);
-          break;
-        case 'pasta':
-        case 'mealprep':
-        case 'sweettreat':
-          filteredRecipes = data.recipes.filter(r => r.category === filterCategory);
-          break;
-        default:
-          filteredRecipes = data.recipes;
+        const allRecipes = data.recipes;
+        localStorage.setItem('allRecipes', JSON.stringify(allRecipes));
+
+        if (page === 'index') renderRecipes(allRecipes, 'recipes', false);
+
+        if (page === 'favorites') {
+          const favIds = loadFavorites();
+          const favRecipes = allRecipes.filter(r => favIds.has(String(r.id)));
+          renderRecipes(favRecipes, 'favoritesContainer', true);
+        }
+      })
+      .catch(err => console.error('Error fetching recipes:', err));
+  }
+
+  // Filtering on index page
+  const filterBtn = document.getElementById('filterButton');
+  if (filterBtn) {
+    filterBtn.addEventListener('click', () => {
+      const cuisine = document.getElementById('cuisine').value.toLowerCase();
+      const prepTime = document.getElementById('prepTime').value.toLowerCase();
+      const craving = document.getElementById('craving').value.toLowerCase();
+
+      let filtered = JSON.parse(localStorage.getItem('allRecipes')) || [];
+
+      if (cuisine) {
+        filtered = filtered.filter(r => (r.cuisine || '').toLowerCase().includes(cuisine));
       }
 
-      renderRecipes(filteredRecipes);
-    })
-    .catch(err => console.error('Error fetching recipes:', err));
+      if (prepTime) {
+        const parseMinutes = str => parseInt(str.replace(/\D/g, ''), 10) || 0;
+        if (prepTime === 'under15') {
+          filtered = filtered.filter(r => parseMinutes(r.prep_time) <= 15);
+        } else if (prepTime === 'under30') {
+          filtered = filtered.filter(r => parseMinutes(r.prep_time) <= 30);
+        }
+      }
+
+      if (craving) {
+        filtered = filtered.filter(r => {
+          const c1 = (r.craving || '').toLowerCase().trim();
+          const c2 = (r.cravings || '').toLowerCase().trim();
+          return c1.includes(craving) || c2.includes(craving);
+        });
+      }
+
+      renderRecipes(filtered, 'recipes', false);
+    });
+  }
 });
 
-function renderRecipes(recipes) {
-  const container = document.getElementById('recipes');
+// Load favorites from localStorage
+function loadFavorites() {
+  const raw = localStorage.getItem('favoriteRecipes');
+  if (!raw) return new Set();
+  try {
+    const arr = JSON.parse(raw);
+    return new Set(Array.isArray(arr) ? arr : []);
+  } catch {
+    return new Set();
+  }
+}
+
+// Save favorites
+function saveFavorites(favSet) {
+  localStorage.setItem('favoriteRecipes', JSON.stringify(Array.from(favSet)));
+}
+
+// Toggle favorite
+function toggleFavorite(id) {
+  const favorites = loadFavorites();
+  if (favorites.has(id)) {
+    favorites.delete(id);
+  } else {
+    favorites.add(id);
+  }
+  saveFavorites(favorites);
+}
+
+// Render recipes for any container
+function renderRecipes(recipes, containerId = 'recipes', isFavoritesPage = false) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
   container.innerHTML = '';
+
+  if (recipes.length === 0 && isFavoritesPage) {
+    container.innerHTML = '<p>No favorites yet.</p>';
+    return;
+  }
 
   recipes.forEach(recipe => {
     const card = document.createElement('div');
@@ -36,120 +107,121 @@ function renderRecipes(recipes) {
       ? `<img src="${recipe.image}" alt="${recipe.title}" class="recipe-img">`
       : '';
 
+    const isFav = loadFavorites().has(String(recipe.id));
+    const heartBtn = `<button class="heart-btn" data-id="${recipe.id}">${isFav ? '❤️' : '🤍'}</button>`;
+
     card.innerHTML = `
       ${imageTag}
       <h2>${recipe.title}</h2>
       <p>${recipe.description || 'No description available.'}</p>
+      ${heartBtn}
     `;
 
-    card.addEventListener('click', () => openModal(recipe));
+    const heartButton = card.querySelector('.heart-btn');
+    heartButton.addEventListener('click', e => {
+      e.stopPropagation();
+      toggleFavorite(String(recipe.id));
+
+      if (isFavoritesPage) {
+        // Remove the card from the DOM immediately
+        card.remove();
+        // Optional: show 'No favorites' message if last item removed
+        if (container.children.length === 0) {
+          container.innerHTML = '<p>No favorites yet.</p>';
+        }
+      } else {
+        // Toggle heart icon
+        heartButton.textContent = loadFavorites().has(String(recipe.id)) ? '❤️' : '🤍';
+      }
+    });
+
+    card.addEventListener('click', e => {
+      if (!e.target.classList.contains('heart-btn')) openModal(recipe);
+    });
+
     container.appendChild(card);
   });
 }
 
-function openModal(recipe) {
+// Modal for recipe details
+async function openModal(recipe) {
   const modal = document.createElement('div');
   modal.className = 'modal-overlay';
-
-  let stepByStepMode = false; // Default: show all instructions in overview card
 
   const modalContent = document.createElement('div');
   modalContent.className = 'modal-content';
 
-  // Video embed
-  const videoEmbed = recipe.video ? getVideoEmbed(recipe.video) : '';
+  let stepByStepMode = false;
 
-  // Modal inner HTML
   modalContent.innerHTML = `
     <span class="close-button">&times;</span>
-    ${videoEmbed}
+    <h2>${recipe.title}</h2>
+    <p>${recipe.description || 'No description'}</p>
+    <h4>Ingredients:</h4>
+    <ul>${(recipe.ingredients || []).map(i => `<li>${i}</li>`).join('')}</ul>
+    <p><strong>Prep time:</strong> ${recipe.prep_time || 'N/A'}</p>
+    <p><strong>Cook time:</strong> ${recipe.cook_time || 'N/A'}</p>
     <button id="toggleMode">Step-by-Step Mode</button>
     <div class="card-container"></div>
-    <button id="prevCard">Previous</button>
-    <button id="nextCard">Next</button>
+    <button id="prevCard" style="display:none;">Previous</button>
+    <button id="nextCard" style="display:none;">Next</button>
   `;
+
+  modal.appendChild(modalContent);
+  document.body.appendChild(modal);
 
   const cardContainer = modalContent.querySelector('.card-container');
 
-  // Helper: build the cards based on mode
   const buildCards = () => {
     const cards = [];
-
-    // Overview card (ingredients and maybe all instructions)
-    const ingredientsList = recipe.ingredients?.length
-      ? recipe.ingredients.map(i => `<li>${i}</li>`).join('')
-      : '<li>No ingredients listed.</li>';
-
-    let instructionsHTML = '';
-    if (!stepByStepMode && recipe.instructions?.length) {
-      const instructionsList = recipe.instructions.map(i => `<li>${i}</li>`).join('');
-      instructionsHTML = `<h4>Instructions:</h4><ol>${instructionsList}</ol>`;
-    }
-
-    const overviewCard = document.createElement('div');
-    overviewCard.className = 'card';
-    overviewCard.innerHTML = `
-      <h2>${recipe.title}</h2>
-      <p>${recipe.description || 'No description available.'}</p>
-      <h4>Ingredients:</h4>
-      <ul>${ingredientsList}</ul>
-      <p><strong>Prep time:</strong> ${recipe.prep_time || 'N/A'}</p>
-      <p><strong>Cook time:</strong> ${recipe.cook_time || 'N/A'}</p>
-      ${instructionsHTML}
-    `;
-    cards.push(overviewCard);
-
-    // Step-by-step instruction cards (if toggle mode is on)
-    if (stepByStepMode && recipe.instructions?.length) {
-      recipe.instructions.forEach((step, idx) => {
+    if (!stepByStepMode) {
+      const overviewCard = document.createElement('div');
+      overviewCard.className = 'card active';
+      overviewCard.innerHTML = `
+        <h4>Instructions:</h4>
+        <ol>${(recipe.instructions || []).map(i => `<li>${i}</li>`).join('')}</ol>
+      `;
+      cards.push(overviewCard);
+    } else {
+      (recipe.instructions || []).forEach((step, idx) => {
         const stepCard = document.createElement('div');
         stepCard.className = 'card';
-        stepCard.innerHTML = `
-          <h4>Step ${idx + 1}</h4>
-          <p>${step}</p>
-        `;
+        stepCard.innerHTML = `<h4>Step ${idx + 1}</h4><p>${step}</p>`;
         cards.push(stepCard);
       });
     }
-
-    // Nutrition card
-    const nutritionCard = document.createElement('div');
-    nutritionCard.className = 'card';
-    nutritionCard.innerHTML = `
-      <h4>Nutritional Information</h4>
-      <p>${recipe.nutrition || 'No nutritional information available.'}</p>
-    `;
-    cards.push(nutritionCard);
-
     return cards;
   };
 
-  // Build initial cards
   let cards = buildCards();
   let currentIndex = 0;
 
   const renderCards = () => {
     cardContainer.innerHTML = '';
-    cards.forEach(card => cardContainer.appendChild(card));
-    cards.forEach(card => card.classList.remove('active'));
-    currentIndex = 0;
+    cards.forEach(c => cardContainer.appendChild(c));
+    cards.forEach(c => c.classList.remove('active'));
     cards[currentIndex].classList.add('active');
+
+    const prevBtn = modalContent.querySelector('#prevCard');
+    const nextBtn = modalContent.querySelector('#nextCard');
+    if (stepByStepMode && cards.length > 1) {
+      prevBtn.style.display = 'inline-block';
+      nextBtn.style.display = 'inline-block';
+    } else {
+      prevBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+    }
   };
 
   renderCards();
 
-  // Toggle mode
   modalContent.querySelector('#toggleMode').addEventListener('click', () => {
     stepByStepMode = !stepByStepMode;
     cards = buildCards();
+    currentIndex = 0;
     renderCards();
-    // Update toggle button label
-    modalContent.querySelector('#toggleMode').textContent = stepByStepMode
-      ? 'Show All Instructions on First Card'
-      : 'Step-by-Step Mode';
   });
 
-  // Navigation
   modalContent.querySelector('#nextCard').addEventListener('click', () => {
     cards[currentIndex].classList.remove('active');
     currentIndex = (currentIndex + 1) % cards.length;
@@ -162,27 +234,11 @@ function openModal(recipe) {
     cards[currentIndex].classList.add('active');
   });
 
-  // Close modal
   modalContent.querySelector('.close-button').addEventListener('click', () => {
     document.body.removeChild(modal);
   });
 
-  modal.addEventListener('click', (e) => {
+  modal.addEventListener('click', e => {
     if (e.target === modal) document.body.removeChild(modal);
   });
-
-  modal.appendChild(modalContent);
-  document.body.appendChild(modal);
-}
-
-function getVideoEmbed(videoUrl) {
-  const videoId = videoUrl.includes('v=') 
-    ? videoUrl.split('v=')[1].split('&')[0]
-    : videoUrl.split('/').pop();
-
-  return `
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>
-    </div>
-  `;
 }

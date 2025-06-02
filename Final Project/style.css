@@ -3,7 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fbe9e7;
-    color: #3c3c3c;;
+    color: #3c3c3c;
+    align-items: center;
+    justify-content: center;
   }
   
   .navbar {
@@ -65,9 +67,6 @@ body {
     padding: 5px;
   }
   
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
   
   .recipes-container {
     display: flex;
@@ -194,13 +193,12 @@ body {
 
   /* filtering on home page */
   .filter-container {
-    max-width: 1000px;
-    margin: 40px;
+    max-width: 500px;
+    margin: 40px auto;
     padding: 20px;
     background: #f8f8f8;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    align-self: center;
   }
   
   .filter-container h2 {

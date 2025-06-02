@@ -3,11 +3,8 @@
       {
         "title": "Vodka Pasta",
         "description": "For when you're in a creamy pasta mood.",
-        "category": "pasta",
-        "favorite": false,
-        "pasta": true,
-        "mealprep": false,
-        "sweettreat": false,
+        "cuisine": "italian",
+        "craving":"carbs",
         "ingredients": [
           "1 tablespoon olive oil",
           "1/4 yellow onion, minced",
@@ -38,11 +35,8 @@
       {
         "title": "Gochujang Pasta",
         "description": "Feeling a lil spice and craving pasta.",
-        "category": "pasta",
-        "favorite": true,
-        "pasta": true,
-        "mealprep": false,
-        "sweettreat": false,
+        "craving": "carbs",
+        "cuisine": "korean",
         "ingredients": [
           "1 lb pasta",
           "2 tablespoon olive oil",
@@ -67,11 +61,7 @@
       {
         "title": "Protein & Spinach Pasta",
         "description": "Meet the macros, switch out protein of choice (chicken, beef, shrimp).",
-        "category": "pasta",
-        "favorite": false,
-        "pasta": true,
-        "mealprep": false,
-        "sweettreat": false,
+        "craving":"carbs",
         "ingredients": [
           "1 lb protein of choice",
           "8 oz. banza pasta",
@@ -101,10 +91,9 @@
         "title": "Spaghetti and Meatballs",
         "description": "A classic.",
         "category": "pasta",
+        "cuisine": "italian",
+        "craving": ["carbs", "meat"],
         "favorite": true,
-        "pasta": true,
-        "mealprep": false,
-        "sweettreat": false,
         "ingredients": [
           "1 pound spaghetti",
           "3 slices white bread (crusts removed, diced)",
@@ -141,10 +130,8 @@
         "title": "Pesto Pasta",
         "description": "Feeling pesto.",
         "category": "pasta",
-        "favorite": false,
-        "pasta": true,
-        "mealprep": false,
-        "sweettreat": false,
+        "cuisine": "italian",
+        "craving": "carbs",
         "ingredients": [
           "8 ounce pasta",
           "1/2 cup basil pesto",
@@ -170,11 +157,9 @@
       {
         "title": "Spicy Tofu Stew",
         "description": "Craving a comforting homemade meal.",
-        "category": "favorite",
-        "favorite": true,
-        "pasta": false,
-        "mealprep": false,
-        "sweettreat": false,
+        "category": "type",
+        "cuisine": "korean",
+        "craving": "soup",
         "ingredients": [
           "1 tablespoon sesame oil",
           "3 green onions",
@@ -204,11 +189,6 @@
       {
         "title": "Chia Pudding",
         "description": "Simple breakie.",
-        "category": "mealprep",
-        "favorite": false,
-        "pasta": false,
-        "mealprep": true,
-        "sweettreat": false,
         "ingredients": [
           "2 tablespoons chia seeds",
           "1 tablespoon honey",
@@ -225,11 +205,7 @@
       {
         "title": "Cheesecake",
         "description": "The best base.",
-        "category": "sweettreat",
-        "favorite": false,
-        "pasta": false,
-        "mealprep": false,
-        "sweettreat": true,
+        "craving": "sweets",
         "ingredients": [
           "5.3 ounce graham cracker",
           "1/4 cup melted butter",
@@ -257,10 +233,7 @@
       {
         "title": "Vegan Chocolate Chip Cookies",
         "description": "Yummyness!",
-        "category": "sweettreat",
-        "favorite": false,
-        "pasta": false,
-        "mealprep": false,
+        "craving": "sweets",
         "sweettreat": true,
         "ingredients": [
           "1/4 cup granulated sugar",
@@ -288,11 +261,7 @@
       {
         "title": "Chocolate Chip Banana Bread",
         "description": "For the SUPER ripe bananas.",
-        "category": "sweettreat",
-        "favorite": true,
-        "pasta": false,
-        "mealprep": false,
-        "sweettreat": true,
+        "craving": "sweets",
         "ingredients": [
           "3 ripe bananas",
           "1/3 cup melted coconut oil",
@@ -321,10 +290,7 @@
         "title": "Nui Soup",
         "description": "Craving soup",
         "category": "all",
-        "favorite": true,
-        "pasta": false,
-        "mealprep": false,
-        "sweettreat": false,
+        "craving": "soup",
         "ingredients": [
           "1.75 lbs meaty pork ribs (separated into individual ribs)",
           "6 cups hot water",
@@ -354,11 +320,6 @@
       {
         "title": "Matcha Latte",
         "description": "Caffeinated!!",
-        "category": "all",
-        "favorite": false,
-        "pasta": false,
-        "mealprep": false,
-        "sweettreat": false,
         "ingredients": [
           "1 teaspoon matcha",
           "2 teaspoon honey",
@@ -379,11 +340,7 @@
       {
         "title": "Stir-fried Fish Cake",
         "description": "Yummy side dish",
-        "category": "all",
-        "favorite": false,
-        "pasta": false,
-        "mealprep": false,
-        "sweettreat": false,
+        "cuisine":"korean",
         "ingredients": [
           "8 ounces eomuk",
           "1/4 medium onion",
@@ -414,11 +371,6 @@
       {
         "title": "Hot Honey Ground Beef Bowl",
         "description": "Hella protein packed.",
-        "category": "mealprep",
-        "favorite": false,
-        "pasta": false,
-        "mealprep": true,
-        "sweettreat": false,
         "ingredients": [
           "1 1/2 pound sweet potato, diced into small cubes",
           "salt, pepper, cinnamon",
@@ -446,10 +398,6 @@
         "title": "Ground Turkey Spaghetti Squash Boats",
         "description": "Healthy and delicious, packed with protein and fiber.",
         "category": "all",
-        "favorite": false,
-        "pasta": false,
-        "mealprep": false,
-        "sweettreat": false,
         "ingredients": [
           "2 small spaghetti squash",
           "2 tsp olive oil",
@@ -485,10 +433,7 @@
         "title": "Snicker Dates",
         "description": "For when you're craving a sweet treat.",
         "category": "sweettreat",
-        "favorite": true,
-        "pasta": false,
-        "mealprep": false,
-        "sweettreat": true,
+        "craving": "sweets",
         "ingredients": [
           "Medjool dates, pitted",
           "2 tablespoon peanut butter",
@@ -508,11 +453,7 @@
       {
         "title": "Ground Beef Taco Bowls",
         "description": "Meal Prep Option.",
-        "category": "mealprep",
-        "favorite": false,
-        "pasta": false,
-        "mealprep": true,
-        "sweettreat": false,
+        "craving":"meat",
         "ingredients": [
           "1 pound ground beef",
           "1 packet taco seasoning",
@@ -539,10 +480,7 @@
         "title": "Spicy Korean Gochujang Noddles",
         "description": "Spicy and sweet moment",
         "category": "all",
-        "favorite": false,
-        "pasta": false,
-        "mealprep": false,
-        "sweettreat": false,
+        "cuisine":"korean",
         "ingredients": [
           "1 pound ground beef",
           "12 ounce rice noodles",
@@ -572,11 +510,7 @@
       {
         "title": "Ground Turkey Bowl",
         "description": "Easy meal prep",
-        "category": "mealprep",
-        "favorite": false,
-        "pasta": false,
-        "mealprep": true,
-        "sweettreat": false,
+        "craving":"meat",
         "ingredients": [
           "1 pound lean ground turkey",
           "1 teaspoon chili powder",
@@ -615,11 +549,8 @@
       {
         "title": "Viet Sweet and Sour Soup",
         "description": "my fav soup!",
-        "category": "all",
-        "favorite": true,
-        "pasta": false,
-        "mealprep": false,
-        "sweettreat": false,
+        "craving":"soup",
+        "cuisine":"vietnamese",
         "ingredients": [
             "4-6 catfish steaks",
             "3-5 cloves of garlic, minced",
@@ -652,11 +583,8 @@
       {
         "title": "Vegan Pasta",
         "description": "feeling veggies!",
-        "category": "all",
-        "favorite": true,
-        "pasta": false,
-        "mealprep": false,
-        "sweettreat": false,
+        "craving":"carbs",
+        "pasta": true,
         "ingredients": [
             "4-6 catfish steaks",
             "3-5 cloves of garlic, minced",
@@ -683,8 +611,287 @@
             "add in catfish and bring back to boil",
             "add in bean sprouts and it's ready to eat!"
         ],
-        "image": "images/canhchua.jpg",
-        "hyperlink": "https://www.theseasonedwok.com/canh-chua-vietnamese-sour-soup/#recipec" 
+        "image": "images/veganpasta.jpg",
+        "hyperlink": "https://www.loveandlemons.com/vegan-pasta/" 
+      },
+      {
+        "title": "Carrot Cake Cupcakes",
+        "description": "Moist, fluffy, AND spiced.",
+        "craving": "sweets",
+        "sweettreat": true,
+        "ingredients": [
+          "1 3/4 all purpose flour",
+          "2 teaspoon baking powder",
+          "1 teaspoon cinnamon",
+          "3/4 teaspoon sea salt",
+          "1/2 teaspoon baking soda",
+          "1/2 teaspoon ground ginger",
+          "1/2 teaspoon nutmeg",
+          "1/2 cup brown sugar",
+          "1/2 cup cane sugar",
+          "1/2 cup vegetable oil",
+          "2 large eggs",
+          "1/3 cup milk",
+          "1 teaspoon vanilla extract",
+          "2 cups finely grated carrots",
+          "cream cheese frosting",
+          "crushed pecans or walnuts"
+        ],
+        "prep_time": "25 minutes",
+        "cook_time": "20 minutes",
+        "instructions": [
+            "preheat the oven to 400°F and line muffin tin with cupcake liners.",
+            "in a medium bowl, whisk together the flour, baking powder, cinnamon, salt, baking soda, ginger, and nutmeg",
+            "in a large bowl, whisk together the brown sugar, cane sugar, vegetable oil, eggs, milk, and vanilla. Stir in the carrots",
+            "pour the dry ingredients into the wet ingredients and mix until just combined. Use a ⅓-cup measuring cup to scoop the batter into the muffin cups",
+            "bake for 16 to 20 minutes, or until the cupcakes spring back to the touch and a toothpick inserted comes out clean. Let cool in the pan for 10 minutes, and then transfer to a wire rack to cool completely",
+            "once cool, decorate the cupcakes with cream cheese frosting and crushed pecans"
+        ],
+        "image": "images/carrotcupcake.jpg",
+        "hyperlink": "https://www.loveandlemons.com/carrot-cake-cupcakes/#wprm-recipe-container-69622" 
+      },
+      {
+        "title": "Air Fryer Baked Sweet Potato",
+        "description": "Simple yet delish meal",
+        "craving":"carbs",
+        "ingredients": [
+          "2 medium sweet potatoes",
+          "sea salt + ground black pepper"
+        ],
+        "prep_time": "5 minutes",
+        "cook_time": "45 minutes",
+        "instructions": [
+            "preheat the oven to 400°F",
+            "use a fork to poke holes in the sweet potatoes",
+            "set them in the air fryer basket and air fry for 40 to 55 minutes, or until puffed up and soft inside when pierced with a fork.",
+            "slice open each potato, fluff the insides, and serve topped with salt, pepper, and other toppings"
+        ],
+        "image": "images/airfryerpotato.jpg",
+        "hyperlink": "https://www.loveandlemons.com/air-fryer-sweet-potato/#wprm-recipe-container-82116" 
+      },
+      {
+        "title": "Caprese Salad",
+        "description": "Simple summer salad!",
+        "cuisine":"italian",
+        "ingredients": [
+          "1 pound fresh mozzarella",
+          "4 large rip tomatoes, sliced",
+          "1 bunch fresh basil",
+          "extra-virgin olive oil",
+          "flaky sea salt",
+          "ground pepper"
+        ],
+        "prep_time": "5 minutes",
+        "cook_time": "5 minutes",
+        "instructions": [
+            "on large plate, layer mozzarella and tomato slices in alternating pattern",
+            "top with basil leaves, drizzle with olive oil, and season with salt and pepper",
+            "eat alone or serve with grilled chicken"
+        ],
+        "image": "images/capresesalad.avif",
+        "hyperlink": "https://www.delish.com/cooking/recipe-ideas/a19695744/easy-caprese-salad-recipe/" 
+      },
+      {
+        "title": "Ceasar Salad",
+        "description": "A classic salad.",
+        "ingredients": [
+          "1 cup mayonnaise",
+          "1/4 cup extra virgin olive oil",
+          "2 tablespoons fresh lemon juice",
+          "2 teaspoons dijon mustard",
+          "1 garlic clove, grated",
+          "1 teaspoon worcestershire sauce",
+          "pinch of sea salt",
+          "ground black pepper",
+          "1/2 cup freshly grated parmesan cheese",
+          "2 medium heads romaine lettuce, chopped"
+        ],
+        "prep_time": "20 minutes",
+        "cook_time": "10 minutes",
+        "instructions": [
+            "for the dressing: in medium bowl whisk together the mayonnaise, olive oil, lemon juice, mustard, garlic, Worcestershire sauce, salt, and several grinds of pepper until smooth. Stir in the cheese and season to taste. If the dressing is too thick, stir in water, 1 teaspoon at a time, until it reaches your desired consistency",
+            "place the lettuce in a large bowl. Add half the dressing, croutons, and half the cheese and toss to coat. Add more dressing as desired, tossing until the salad is coated to your liking. Season to taste and top with the remaining croutons, remaining cheese, and several grinds of pepper."
+        ],
+        "image": "images/caesarsalad.jpg",
+        "hyperlink": "https://www.loveandlemons.com/caesar-salad/#wprm-recipe-container-42209" 
+      },
+      {
+        "title": "Shrimp Risotto",
+        "description": "Easy and delish.",
+        "craving":"carbs",
+        "cuisine":"italian",
+        "ingredients": [
+          "1 1/2 cup carnaroli rice",
+          "1.8 oz white wine",
+          "1/2 cup butter",
+          "3.5 oz grated parmigiano reggiano cheese",
+          "1/2 onion",
+          "1 sprig parsley",
+          "3 carrots",
+          "2 ribs celery",
+          "1.7 oz brandy",
+          "2 liter water",
+          "2 tablespoon extra virgin olive oil",
+          "1 garlic clove, grated",
+          "2 1/2 tablespoon tomato paste",
+          "20 shrimps"
+        ],
+        "prep_time": "40 minutes",
+        "cook_time": "60 minutes",
+        "instructions": [
+            "prep shrimp risotto, removing head, intestine and shell.Keep aside 4 whole shrimps, cut the rest into 1/2-inch pieces Collect everything in a bowl and leave them in the refrigerator until use.",
+            "slice the carrots into 1/2-inch thick pieces 4, cut the onions into wedges 5, and chop the celery into 1/2-inch pieces",
+            "collect all the vegetables in a bowl and add a clove of garlic.Heat oil in a pot, add the vegetables and let them brown for a few minutes. Then add the tomato paste and cook for 4-5 minutes.",
+            "put the shrimp scraps in the pot and cook for another 5 minutes. Deglaze with brandy. Once all the alcohol has evaporated, pour very cold water until the pot's contents are completely covered. Lower the heat and cook for about 60 minutes.",
+            "strain everything through a sieve. Peel and finely chop half an onion",
+            "put the rice in the pot, season with salt, and toast for a few minutes. Add the onion, wait another minute, and deglaze with white wine, allowing all the alcohol to evaporate.",
+            "cook the rice by moistening it with shrimp stock, adding a ladle each time the previous one is absorbed. Meanwhile, melt the butter in a pan and add the shrimp pieces, season with salt, and sauté for about 3 minutes.",
+            "In the same pan, sauté the whole shrimps set aside earlier. When the rice is cooked, turn off the heat, add the shrimp pieces, and the butter",
+            "add the parmesan and stir. Plate the risotto, add a whole shrimp on top, and finish with freshly chopped parsley. The shrimp risotto is ready to be served"
+            
+        ],
+        "image": "images/shrimprisotto.jpg",
+        "hyperlink": "https://www.giallozafferano.com/recipes/shrimp-risotto.html" 
+      },
+      {
+        "title": "Chicken Noodle Soup",
+        "description": "Comfort meal",
+        "craving":"soup",
+        "ingredients": [
+          "1/2 tablespoon butter",
+          "2 ribs celery, diced",
+          "3 large carrots, diced",
+          "1 clove garlic, diced",
+          "10 cups chicken broth",
+          "1 teaspoon salt",
+          "1/2 teaspoon ground black pepper",
+          "1/8 teaspoon dried thyme",
+          "1/8 teaspoon crushed red pepper flakes",
+          "4 cups dry egg noodles",
+          "3 cups rotisserie chicken",
+          "1 teaspoon better bouillon chicken flavor"
+        ],
+        "prep_time": "20 minutes",
+        "cook_time": "20 minutes",
+        "instructions": [
+            "add butter, diced celery and carrots to a large stock pot over medium-high heat. Saute for 3 minutes. Add garlic and cook for another 30 seconds.",
+            "sdd chicken stock and season the broth with rosemary, thyme, crushed red pepper, and salt (definitely TASTE the broth before adding more salt), and pepper. Taste and add a spoonful of “better than bullion” chicken or chicken bouillon cubes or granules as needed.",
+            "bring broth to a boil. Add noodles and cook just until noodles are al dente.",
+            "add chicken meat from the rotisserie chicken. Taste the broth again and add more seasonings, if needed."
+        ],
+        "image": "images/chickennoodlesoup.jpg",
+        "hyperlink": "https://tastesbetterfromscratch.com/chicken-noodle-soup/" 
+      },
+      {
+        "title": "Thai Chicken Lettuce Wraps",
+        "description": "Easy and packed with nutrients.",
+        "ingredients": [
+          "1 tablespoon olive oil",
+          "1 pound ground chicken",
+          "4 cloves garlic, minced",
+          "1/2 sweet onion, chopped",
+          "1/2 teaspoon salt",
+          "1/4 teaspoon ground black pepper",
+          "1 cup carrot, shredded",
+          "1/2 cup finely shredded cabbage",
+          "3 green onions, chopped",
+          "1/4 cup fresh cilantro, chopped",
+          "1/3 cup sweet chili sauce",
+          "1 tablespoon smooth peanut butter",
+          "1/4 teaspoon freshly grated ginger",
+          "2 teaspoons low sodium soy sauce",
+          "romaine lettuce leaves"
+        ],
+        "prep_time": "5 minutes",
+        "cook_time": "20 minutes",
+        "instructions": [
+            "heat oil in a large skillet over medium. Add chicken, garlic, onions, salt and pepper and cook, stirring occasionally, until chicken is cooked through.",
+            "add the carrots, cabbage, and green onions, cooking an additional 4-5 minutes or until vegetables are tender.",
+            "in a small bowl, combine the sweet chili sauce, ginger, chunky peanut butter, and soy sauce, and crushed red pepper. Stir until smooth. Add to pan along with chopped cilantro. Stir to coat."
+        ],
+        "image": "images/thailettucewrap.jpg",
+        "hyperlink": "https://tastesbetterfromscratch.com/thai-chicken-lettuce-wraps/" 
+      },
+      {
+        "title": "Magnolian Beef",
+        "description": "Real juicy meat.",
+        "craving":"meat",
+        "ingredients": [
+          "11 oz beef (New York steak or flank steak)",
+          "1 teaspoon baking soda",
+          "1 tablespoon cornstarch",
+          "2 tablespoon water",
+          "1 tablespoon Kikkoman® Oyster Sauce",
+          "1 teaspoon Kikkoman® Soy Sauce",
+          "1 teaspoon Kikkoman® Tamari Soy Sauce",
+         " 1/4 teaspoon white pepper powder",
+         " 1 tablespoon oil (pre-cooking)",
+          "1 tablespoon cornstarch (pre-cooking",
+          "1 medium white onion",
+          "5 stalks scallions",
+          "2 cloves garlic",
+          "1/2 red bell pepper",
+          "1/2 green bell pepper",
+          "4 dried chili pepper"
+        ],
+        "prep_time": "10 minutes",
+        "cook_time": "10 minutes",
+        "instructions": [
+            "cut and wash beef, slice into thin slices across the grain",
+            "marinate beef",
+            "cut veggies: chop onions into 1/4 inch thick slices, chop scallions into 1 inch pieces, mince garlic",
+            "make sauce: mix together oyster sauce, light soy sauce, dark soy sauce, chili sauce, sugar, cooking wine",
+            "prepare beef for stir fry: add oil to beef and mix, then add cornstarch to crisp beef up",
+            "stir fry beef",
+            "stir fry veggies",
+            "add the garlic, dried chili pepper, onion, and green onion whites, and green and red bell peppers. Fry them for about 1 1/2 minutes, until they're fragrant and cooked through.",
+            "add the beef back in and stir fry for about 20 seconds.",
+            "then add the sauce and the green parts of the green onion. Stir fry for 30 seconds more, then turn off the heat."
+        ],
+        "image": "images/magnolianbeef.jpg",
+        "video": "https://www.youtube.com/watch?v=X9E6HPZurmE",
+        "hyperlink": "https://www.madewithlau.com/recipes/mongolian-beef" 
+      },
+      {
+        "title": "Bo kho (viet beef stew)",
+        "description": "beef AND broth!!!",
+        "craving":["meat","soup"],
+        "cuisine":"vietnamese",
+        "ingredients": [
+          "2 pound beef shank",
+          "water",
+          "1 tablespoon salt",
+          "2 tablespoon soy sauce",
+          "2 tablespoon hoison sauce",
+          "2 teaspoon salt",
+          "1 teaspoon viet beef stew seasoning",
+          "2 tablesppon cooking oil",
+          "4 cloves garlic, chopped",
+          "1 teaspoon paprika",
+          " 1 tablespoon viet beef stew seasoning (for broth)",
+          "1 medium onion",
+          "1 1/2 tablespoon fresh ginger",
+          "2 stalks lemon grass",
+          "2 tablespoon tomato paste",
+          "2 tablespoon dark soy sauce",
+          "2 pods star anise",
+          "4 bay leaves",
+          "1 can chicken broth",
+          "6 oz coconut soda",
+          "5 cups filtered water",
+          "3 carrots"
+        ],
+        "prep_time": "20 minutes",
+        "cook_time": "90 minutes",
+        "instructions": [
+            "clean the meat. Add beef to a large pot and add 1 tbsp salt and enough tap water to barely cover the meat bring to a boil on high heat, and once it hits a boil for 30 seconds, kill the heat, drain, and rinse under running water to clean.",
+            "marinate the meat, and let sit for two hours or overnight",
+            "preheat a large pot on medium high. When hot, add the oil, let it warm a bit, then add all the garlic and stir to slowly saute until it turns light brown. Then add the paprika an stir until it releases its aroma, about 30 seconds.",
+            "add all broth ingredients to the pot except the carrots. Turn the heat to high until it hits a boil, then reduce heat so it maintains a low boil. Cook until the meat is as tender as you'd like it, about 60-90 minutes. Add carrots towards the final 10 minutes so it softens. Discard the cooked onions and star anise pods.",
+            "tearing fresh Thai basil onto your plate, taking occasional bites of jalapeno, and dipping a few pieces of meat into the salt, pepper, lemon juice side for variety."
+        ],
+        "image": "images/bokho.avif",
+        "hyperlink": "https://www.hungryhuy.com/bo-kho-recipe-vietnamese-beef-stew/" 
       }
     ]
 }
