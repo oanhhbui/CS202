@@ -5,26 +5,30 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('recipes.json')
       .then(res => res.json())
       .then(data => {
-        // Assign unique IDs to recipes if missing
         data.recipes.forEach((r, idx) => {
           if (!r.id) r.id = String(idx + 1);
         });
-
+  
         const allRecipes = data.recipes;
         localStorage.setItem('allRecipes', JSON.stringify(allRecipes));
-
+        
+        // shows only recipes in index pg
         if (page === 'index') renderRecipes(allRecipes, 'recipes', false);
-
+        
+        // shows only recipes in favorites pg
         if (page === 'favorites') {
           const favIds = loadFavorites();
           const favRecipes = allRecipes.filter(r => favIds.has(String(r.id)));
           renderRecipes(favRecipes, 'favoritesContainer', true);
         }
       })
+
+      // if catch fails, errors show
       .catch(err => console.error('Error fetching recipes:', err));
   }
+  
 
-  // Filtering on index page
+  // filtering on index page
   const filterBtn = document.getElementById('filterButton');
   if (filterBtn) {
     filterBtn.addEventListener('click', () => {
@@ -37,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (cuisine) {
         filtered = filtered.filter(r => (r.cuisine || '').toLowerCase().includes(cuisine));
       }
-
+      // convert json data to filtering
       if (prepTime) {
         const parseMinutes = str => parseInt(str.replace(/\D/g, ''), 10) || 0;
         if (prepTime === 'under15') {
@@ -60,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Load favorites from localStorage
+// load favorites from localStorage
 function loadFavorites() {
   const raw = localStorage.getItem('favoriteRecipes');
   if (!raw) return new Set();
@@ -72,12 +76,12 @@ function loadFavorites() {
   }
 }
 
-// Save favorites
+// save favorites
 function saveFavorites(favSet) {
   localStorage.setItem('favoriteRecipes', JSON.stringify(Array.from(favSet)));
 }
 
-// Toggle favorite
+// toggle favorite
 function toggleFavorite(id) {
   const favorites = loadFavorites();
   if (favorites.has(id)) {
@@ -88,12 +92,13 @@ function toggleFavorite(id) {
   saveFavorites(favorites);
 }
 
-// Render recipes for any container
+// render recipes for any container
 function renderRecipes(recipes, containerId = 'recipes', isFavoritesPage = false) {
   const container = document.getElementById(containerId);
   if (!container) return;
   container.innerHTML = '';
 
+  //empty favorites page
   if (recipes.length === 0 && isFavoritesPage) {
     container.innerHTML = '<p>No favorites yet.</p>';
     return;
@@ -107,6 +112,7 @@ function renderRecipes(recipes, containerId = 'recipes', isFavoritesPage = false
       ? `<img src="${recipe.image}" alt="${recipe.title}" class="recipe-img">`
       : '';
 
+    // if recipe is favorite, heart will fill
     const isFav = loadFavorites().has(String(recipe.id));
     const heartBtn = `<button class="heart-btn" data-id="${recipe.id}">${isFav ? '❤️' : '🤍'}</button>`;
 
@@ -119,18 +125,19 @@ function renderRecipes(recipes, containerId = 'recipes', isFavoritesPage = false
 
     const heartButton = card.querySelector('.heart-btn');
     heartButton.addEventListener('click', e => {
+      // doesn't trigger the whole modal to open with a click
       e.stopPropagation();
       toggleFavorite(String(recipe.id));
 
       if (isFavoritesPage) {
-        // Remove the card from the DOM immediately
+        // remove the card 
         card.remove();
-        // Optional: show 'No favorites' message if last item removed
+
         if (container.children.length === 0) {
           container.innerHTML = '<p>No favorites yet.</p>';
         }
       } else {
-        // Toggle heart icon
+        // toggle heart icon
         heartButton.textContent = loadFavorites().has(String(recipe.id)) ? '❤️' : '🤍';
       }
     });
@@ -143,7 +150,7 @@ function renderRecipes(recipes, containerId = 'recipes', isFavoritesPage = false
   });
 }
 
-// Modal for recipe details
+// modal for recipe details
 async function openModal(recipe) {
   const modal = document.createElement('div');
   modal.className = 'modal-overlay';
@@ -214,7 +221,7 @@ async function openModal(recipe) {
   };
 
   renderCards();
-
+// step by step button toggle
   modalContent.querySelector('#toggleMode').addEventListener('click', () => {
     stepByStepMode = !stepByStepMode;
     cards = buildCards();
@@ -222,12 +229,14 @@ async function openModal(recipe) {
     renderCards();
   });
 
+  // forward button
   modalContent.querySelector('#nextCard').addEventListener('click', () => {
     cards[currentIndex].classList.remove('active');
     currentIndex = (currentIndex + 1) % cards.length;
     cards[currentIndex].classList.add('active');
   });
 
+  // backwards button
   modalContent.querySelector('#prevCard').addEventListener('click', () => {
     cards[currentIndex].classList.remove('active');
     currentIndex = (currentIndex - 1 + cards.length) % cards.length;
