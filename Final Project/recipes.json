@@ -898,6 +898,99 @@
         ],
         "image": "images/bokho.avif",
         "hyperlink": "https://www.hungryhuy.com/bo-kho-recipe-vietnamese-beef-stew/" 
+      },
+      {
+        "title": "Che Thai (Fruit Cocktail)",
+        "description": "Full of sweets and fruits",
+        "craving":"sweets",
+        "cuisine":"vietnamese",
+        "ingredients": [
+          "1 can 20 oz jackfruit",
+          "1 can 20 oz lychee",
+          "1 can 20 oz longan",
+          "1 can 19 oz ai-yu jelly",
+          "1 can 20 oz toddy palm seeds",
+          "1 fresh coconut",
+          "1 can 13.5 oz coconut milk",
+          "1 can 20 oz coconut jelly"
+        ],
+        "prep_time": "20 minutes",
+        "cook_time": "10 minutes",
+        "instructions": [
+            "prepare fruits",
+            "crack open coconut and set aside juice, carve out slices of coconut meat",
+            "open all the canned fruit, save the syrup from one can in a separate container",
+            "cut jackfruit into slices, cut lychee into large slices, and cut toddy palm into thin slices. keep the longan in its original shape since these come fairly small.",
+            "combine all fruit into large container",
+            "in another container, combine coconut milk and coconut juice",
+            "slowly start to add the reserved syrup to sweeten the milk about 1 tbsp at a time, until its sweet enough for your taste",
+            "add the sweetened coconut milk, coconut juice, coconut pulp, and cubes of grass jelly into the large container with the fruit and stir"
+        ],
+        "image": "images/chethai.jpg",
+        "hyperlink": "https://www.hungryhuy.com/che-thai-recipe/#wprm-recipe-container-4708"
+      },
+      {
+        "title": "Banh Kep (Vegan Pandan Waffle)",
+        "description": "Bomb ass waffles",
+        "craving":"sweets",
+        "cuisine":"vietnamese",
+        "ingredients": [
+          "2-4 drops artificial pandan extract",
+          "1/2 cup water",
+          "2 cups tapioca starch",
+          "1/2 cup rice flour",
+          "1/2 cup all purpose flour",
+          "1 cup granulated white sugar",
+          "2 teaspoon baking powder",
+          "1/4 teaspoon salt",
+          "150 grams egg replacement",
+          "13.5 fl oz coconut cream",
+          "5 grams neutral cooking oil"
+        ],
+        "prep_time": "10 minutes",
+        "cook_time": "15 minutes",
+        "instructions": [
+            "in a medium sized mixing bowl, add the tapioca starch, rice flour, all purpose flour, sugar, baking powder, and salt",
+            "in a separate, larger mixing bowl, add the egg replacement, coconut cream, pandan extract, and oil, then mix",
+            "sift the dry ingredients into the wet ingredient bowl and mix for a bit to incorporate the ingredients, being careful not to mix it too much. The batter should be a bit thick and have some lumps still",
+            "rest the batter on the counter for one hour, so the flour can hydrate. If you will not make the waffles at the one hour mark, you can put the batter straight into the fridge in an air tight container and rest for up to one week"
+        ],
+        "image": "images/pandanwaffles.avif",
+        "hyperlink": "https://www.hungryhuy.com/vegan-pandan-waffles/#wprm-recipe-container-11290"
+      },
+      {
+        "title": "Japanese Souffle Pancakes",
+        "description": "Yummyy & fluffyy",
+        "craving":"sweets",
+        "ingredients": [
+          "170 grams egg whites",
+          "25 grams granulated sugar",
+          "2 grams cream tartar",
+          "35 grams egg yolk",
+          "45 grams whole milk",
+          "50 grams cake flour",
+          "2 grams baking powder",
+          "1 gram salt",
+          "4 fl oz heavy whipping cream",
+          "37.5 grams granulated white sugar"
+        ],
+        "prep_time": "15 minutes",
+        "cook_time": "15 minutes",
+        "instructions": [
+            "in a stand mixer with a whisk attachment, combine the egg whites, sugar, and the cream tartar. begin beating the eggs on the highest level of your stand mixer.",
+            "beat the egg whites for approximately 3 minutes, or until you get very stiff peaks and a glossy finish",
+            "while you are making the meringue, whisk the egg yolks and milk in a large mixing bowl",
+            "add the cake flour, baking powder, and salt in the mixing bowl and whisk until fully incorporated",
+            "add ¼ of the meringue into the batter and whisk until it’s fully incorporated",
+            "then add the rest of the meringue and use a spatula to carefully slice through the batter to get the spatula underneath",
+            "gently fold turn and fold over bottom of batter onto tap until fully incorporated",
+            "preheat pan on lowest setting, brush some cooking oil on",
+            "add heaping scoop of batter and cover with lid and cook for 40 seconds",
+            "remove the lid, then use the same disher and scoop another heaping portion of the batter on top of each pancake. Close the lid and cook for another 2 minutes so the top of the new batter scoops can cook a bit",
+            "remove the lid and use your fish turner to gently lift the pancake bottom to see if there's a medium or golden brown color"
+        ],
+        "image": "images/soufflepancake.jpg",
+        "hyperlink": "https://www.hungryhuy.com/japanese-souffle-pancakes/#wprm-recipe-container-10979"
       }
     ]
 }

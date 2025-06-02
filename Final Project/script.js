@@ -200,7 +200,6 @@ function renderNotesPage() {
   });
 }
 
-
 // modal for recipe details
 async function openModal(recipe) {
   const modal = document.createElement('div');
