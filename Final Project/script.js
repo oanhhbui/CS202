@@ -165,7 +165,7 @@ function renderRecipes(recipes, containerId = 'recipes', isFavoritesPage = false
     container.appendChild(card);
   });
 }
-//notes page
+// notes page
 function renderNotesPage() {
   const container = document.getElementById('notesContainer');
   const allRecipes = JSON.parse(localStorage.getItem('allRecipes')) || [];
